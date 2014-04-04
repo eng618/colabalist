@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CD654B018EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
+		5CD654B218EE5FE70015E244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B118EE5FE70015E244 /* CoreGraphics.framework */; };
+		5CD654B418EE5FE70015E244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B318EE5FE70015E244 /* UIKit.framework */; };
+		5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654B818EE5FE70015E244 /* InfoPlist.strings */; };
+		5CD654BC18EE5FE70015E244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654BB18EE5FE70015E244 /* main.m */; };
+		5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */; };
+		5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654C118EE5FE70015E244 /* Main_iPhone.storyboard */; };
+		5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654C418EE5FE70015E244 /* Main_iPad.storyboard */; };
+		5CD654C918EE5FE70015E244 /* GEMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654C818EE5FE70015E244 /* GEMViewController.m */; };
+		5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654CA18EE5FE70015E244 /* Images.xcassets */; };
+		5CD654D218EE5FE70015E244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654D118EE5FE70015E244 /* XCTest.framework */; };
+		5CD654D318EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
+		5CD654D418EE5FE70015E244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B318EE5FE70015E244 /* UIKit.framework */; };
+		5CD654DC18EE5FE70015E244 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654DA18EE5FE70015E244 /* InfoPlist.strings */; };
+		5CD654DE18EE5FE70015E244 /* Colab_a_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654DD18EE5FE70015E244 /* Colab_a_listTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CD654D518EE5FE70015E244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CD654A418EE5FE60015E244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CD654AB18EE5FE60015E244;
+			remoteInfo = "Colab-a-list";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CD654AC18EE5FE70015E244 /* Colab-a-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colab-a-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD654AF18EE5FE70015E244 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5CD654B118EE5FE70015E244 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5CD654B318EE5FE70015E244 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5CD654B718EE5FE70015E244 /* Colab-a-list-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colab-a-list-Info.plist"; sourceTree = "<group>"; };
+		5CD654B918EE5FE70015E244 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5CD654BB18EE5FE70015E244 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CD654BD18EE5FE70015E244 /* Colab-a-list-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colab-a-list-Prefix.pch"; sourceTree = "<group>"; };
+		5CD654BE18EE5FE70015E244 /* GEMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMAppDelegate.h; sourceTree = "<group>"; };
+		5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMAppDelegate.m; sourceTree = "<group>"; };
+		5CD654C218EE5FE70015E244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5CD654C518EE5FE70015E244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5CD654C718EE5FE70015E244 /* GEMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMViewController.h; sourceTree = "<group>"; };
+		5CD654C818EE5FE70015E244 /* GEMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMViewController.m; sourceTree = "<group>"; };
+		5CD654CA18EE5FE70015E244 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5CD654D018EE5FE70015E244 /* Colab-a-listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Colab-a-listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD654D118EE5FE70015E244 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5CD654D918EE5FE70015E244 /* Colab-a-listTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colab-a-listTests-Info.plist"; sourceTree = "<group>"; };
+		5CD654DB18EE5FE70015E244 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5CD654DD18EE5FE70015E244 /* Colab_a_listTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Colab_a_listTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CD654A918EE5FE60015E244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654B218EE5FE70015E244 /* CoreGraphics.framework in Frameworks */,
+				5CD654B418EE5FE70015E244 /* UIKit.framework in Frameworks */,
+				5CD654B018EE5FE70015E244 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CD654CD18EE5FE70015E244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654D218EE5FE70015E244 /* XCTest.framework in Frameworks */,
+				5CD654D418EE5FE70015E244 /* UIKit.framework in Frameworks */,
+				5CD654D318EE5FE70015E244 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CD654A318EE5FE60015E244 = {
+			isa = PBXGroup;
+			children = (
+				5CD654B518EE5FE70015E244 /* Colab-a-list */,
+				5CD654D718EE5FE70015E244 /* Colab-a-listTests */,
+				5CD654AE18EE5FE70015E244 /* Frameworks */,
+				5CD654AD18EE5FE70015E244 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CD654AD18EE5FE70015E244 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654AC18EE5FE70015E244 /* Colab-a-list.app */,
+				5CD654D018EE5FE70015E244 /* Colab-a-listTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CD654AE18EE5FE70015E244 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654AF18EE5FE70015E244 /* Foundation.framework */,
+				5CD654B118EE5FE70015E244 /* CoreGraphics.framework */,
+				5CD654B318EE5FE70015E244 /* UIKit.framework */,
+				5CD654D118EE5FE70015E244 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CD654B518EE5FE70015E244 /* Colab-a-list */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654BE18EE5FE70015E244 /* GEMAppDelegate.h */,
+				5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */,
+				5CD654C118EE5FE70015E244 /* Main_iPhone.storyboard */,
+				5CD654C418EE5FE70015E244 /* Main_iPad.storyboard */,
+				5CD654C718EE5FE70015E244 /* GEMViewController.h */,
+				5CD654C818EE5FE70015E244 /* GEMViewController.m */,
+				5CD654CA18EE5FE70015E244 /* Images.xcassets */,
+				5CD654B618EE5FE70015E244 /* Supporting Files */,
+			);
+			path = "Colab-a-list";
+			sourceTree = "<group>";
+		};
+		5CD654B618EE5FE70015E244 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654B718EE5FE70015E244 /* Colab-a-list-Info.plist */,
+				5CD654B818EE5FE70015E244 /* InfoPlist.strings */,
+				5CD654BB18EE5FE70015E244 /* main.m */,
+				5CD654BD18EE5FE70015E244 /* Colab-a-list-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CD654D718EE5FE70015E244 /* Colab-a-listTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654DD18EE5FE70015E244 /* Colab_a_listTests.m */,
+				5CD654D818EE5FE70015E244 /* Supporting Files */,
+			);
+			path = "Colab-a-listTests";
+			sourceTree = "<group>";
+		};
+		5CD654D818EE5FE70015E244 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654D918EE5FE70015E244 /* Colab-a-listTests-Info.plist */,
+				5CD654DA18EE5FE70015E244 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CD654AB18EE5FE60015E244 /* Colab-a-list */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CD654E118EE5FE70015E244 /* Build configuration list for PBXNativeTarget "Colab-a-list" */;
+			buildPhases = (
+				5CD654A818EE5FE60015E244 /* Sources */,
+				5CD654A918EE5FE60015E244 /* Frameworks */,
+				5CD654AA18EE5FE60015E244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Colab-a-list";
+			productName = "Colab-a-list";
+			productReference = 5CD654AC18EE5FE70015E244 /* Colab-a-list.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CD654CF18EE5FE70015E244 /* Colab-a-listTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CD654E418EE5FE70015E244 /* Build configuration list for PBXNativeTarget "Colab-a-listTests" */;
+			buildPhases = (
+				5CD654CC18EE5FE70015E244 /* Sources */,
+				5CD654CD18EE5FE70015E244 /* Frameworks */,
+				5CD654CE18EE5FE70015E244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CD654D618EE5FE70015E244 /* PBXTargetDependency */,
+			);
+			name = "Colab-a-listTests";
+			productName = "Colab-a-listTests";
+			productReference = 5CD654D018EE5FE70015E244 /* Colab-a-listTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CD654A418EE5FE60015E244 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GEM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Garcia Enterprise";
+				TargetAttributes = {
+					5CD654CF18EE5FE70015E244 = {
+						TestTargetID = 5CD654AB18EE5FE60015E244;
+					};
+				};
+			};
+			buildConfigurationList = 5CD654A718EE5FE60015E244 /* Build configuration list for PBXProject "Colab-a-list" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CD654A318EE5FE60015E244;
+			productRefGroup = 5CD654AD18EE5FE70015E244 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CD654AB18EE5FE60015E244 /* Colab-a-list */,
+				5CD654CF18EE5FE70015E244 /* Colab-a-listTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CD654AA18EE5FE60015E244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */,
+				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
+				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
+				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CD654CE18EE5FE70015E244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654DC18EE5FE70015E244 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CD654A818EE5FE60015E244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
+				5CD654C918EE5FE70015E244 /* GEMViewController.m in Sources */,
+				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CD654CC18EE5FE70015E244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD654DE18EE5FE70015E244 /* Colab_a_listTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CD654D618EE5FE70015E244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CD654AB18EE5FE60015E244 /* Colab-a-list */;
+			targetProxy = 5CD654D518EE5FE70015E244 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5CD654B818EE5FE70015E244 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CD654B918EE5FE70015E244 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5CD654C118EE5FE70015E244 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CD654C218EE5FE70015E244 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5CD654C418EE5FE70015E244 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CD654C518EE5FE70015E244 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5CD654DA18EE5FE70015E244 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CD654DB18EE5FE70015E244 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CD654DF18EE5FE70015E244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CD654E018EE5FE70015E244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CD654E218EE5FE70015E244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab-a-list/Colab-a-list-Prefix.pch";
+				INFOPLIST_FILE = "Colab-a-list/Colab-a-list-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5CD654E318EE5FE70015E244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab-a-list/Colab-a-list-Prefix.pch";
+				INFOPLIST_FILE = "Colab-a-list/Colab-a-list-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5CD654E518EE5FE70015E244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colab-a-list.app/Colab-a-list";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab-a-list/Colab-a-list-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Colab-a-listTests/Colab-a-listTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5CD654E618EE5FE70015E244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colab-a-list.app/Colab-a-list";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colab-a-list/Colab-a-list-Prefix.pch";
+				INFOPLIST_FILE = "Colab-a-listTests/Colab-a-listTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CD654A718EE5FE60015E244 /* Build configuration list for PBXProject "Colab-a-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CD654DF18EE5FE70015E244 /* Debug */,
+				5CD654E018EE5FE70015E244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CD654E118EE5FE70015E244 /* Build configuration list for PBXNativeTarget "Colab-a-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CD654E218EE5FE70015E244 /* Debug */,
+				5CD654E318EE5FE70015E244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5CD654E418EE5FE70015E244 /* Build configuration list for PBXNativeTarget "Colab-a-listTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CD654E518EE5FE70015E244 /* Debug */,
+				5CD654E618EE5FE70015E244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CD654A418EE5FE60015E244 /* Project object */;
+}
