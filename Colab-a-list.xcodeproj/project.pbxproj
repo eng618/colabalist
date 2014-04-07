@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
+		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
+		5C3FF84B18F2641300794524 /* GEMAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84A18F2641300794524 /* GEMAboutViewController.m */; };
 		5CD654B018EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
 		5CD654B218EE5FE70015E244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B118EE5FE70015E244 /* CoreGraphics.framework */; };
 		5CD654B418EE5FE70015E244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B318EE5FE70015E244 /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
 		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
 		5C3FF84318F236B900794524 /* GEMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItem.m; sourceTree = "<group>"; };
+		5C3FF84518F263E400794524 /* GEMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSettingsViewController.h; sourceTree = "<group>"; };
+		5C3FF84618F263E400794524 /* GEMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSettingsViewController.m; sourceTree = "<group>"; };
+		5C3FF84918F2641300794524 /* GEMAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAboutViewController.h; sourceTree = "<group>"; };
+		5C3FF84A18F2641300794524 /* GEMAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAboutViewController.m; sourceTree = "<group>"; };
 		5CD654AC18EE5FE70015E244 /* Colab-a-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colab-a-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD654AF18EE5FE70015E244 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CD654B118EE5FE70015E244 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C3FF84818F263F800794524 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5C3FF84518F263E400794524 /* GEMSettingsViewController.h */,
+				5C3FF84618F263E400794524 /* GEMSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		5C3FF84C18F2641E00794524 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				5C3FF84918F2641300794524 /* GEMAboutViewController.h */,
+				5C3FF84A18F2641300794524 /* GEMAboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 		5CD654A318EE5FE60015E244 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +164,8 @@
 				5CD654FC18F2218A0015E244 /* Shopping */,
 				5CD654FB18F221400015E244 /* Recipes */,
 				5CD654FA18F221350015E244 /* Meal Plan */,
+				5C3FF84818F263F800794524 /* Settings */,
+				5C3FF84C18F2641E00794524 /* About */,
 				5CD654CA18EE5FE70015E244 /* Images.xcassets */,
 				5CD654E718F1D3730015E244 /* Library */,
 				5CD654B618EE5FE70015E244 /* Supporting Files */,
@@ -330,6 +356,8 @@
 				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
 				5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */,
+				5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */,
+				5C3FF84B18F2641300794524 /* GEMAboutViewController.m in Sources */,
 				5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */,
 				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
