@@ -15,13 +15,17 @@
 		5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */; };
 		5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654C118EE5FE70015E244 /* Main_iPhone.storyboard */; };
 		5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654C418EE5FE70015E244 /* Main_iPad.storyboard */; };
-		5CD654C918EE5FE70015E244 /* GEMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654C818EE5FE70015E244 /* GEMViewController.m */; };
 		5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654CA18EE5FE70015E244 /* Images.xcassets */; };
 		5CD654D218EE5FE70015E244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654D118EE5FE70015E244 /* XCTest.framework */; };
 		5CD654D318EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
 		5CD654D418EE5FE70015E244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B318EE5FE70015E244 /* UIKit.framework */; };
 		5CD654DC18EE5FE70015E244 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD654DA18EE5FE70015E244 /* InfoPlist.strings */; };
 		5CD654DE18EE5FE70015E244 /* Colab_a_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654DD18EE5FE70015E244 /* Colab_a_listTests.m */; };
+		5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654E918F1D3730015E244 /* SWRevealViewController.m */; };
+		5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654EF18F1F1F70015E244 /* GEMSideBarTableViewController.m */; };
+		5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */; };
+		5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */; };
+		5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +51,22 @@
 		5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMAppDelegate.m; sourceTree = "<group>"; };
 		5CD654C218EE5FE70015E244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5CD654C518EE5FE70015E244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		5CD654C718EE5FE70015E244 /* GEMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMViewController.h; sourceTree = "<group>"; };
-		5CD654C818EE5FE70015E244 /* GEMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMViewController.m; sourceTree = "<group>"; };
 		5CD654CA18EE5FE70015E244 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CD654D018EE5FE70015E244 /* Colab-a-listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Colab-a-listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD654D118EE5FE70015E244 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5CD654D918EE5FE70015E244 /* Colab-a-listTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colab-a-listTests-Info.plist"; sourceTree = "<group>"; };
 		5CD654DB18EE5FE70015E244 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CD654DD18EE5FE70015E244 /* Colab_a_listTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Colab_a_listTests.m; sourceTree = "<group>"; };
+		5CD654E818F1D3730015E244 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		5CD654E918F1D3730015E244 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		5CD654EE18F1F1F70015E244 /* GEMSideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSideBarTableViewController.h; sourceTree = "<group>"; };
+		5CD654EF18F1F1F70015E244 /* GEMSideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSideBarTableViewController.m; sourceTree = "<group>"; };
+		5CD654F118F1F3480015E244 /* GEMShoppingListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMShoppingListTableViewController.h; sourceTree = "<group>"; };
+		5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMShoppingListTableViewController.m; sourceTree = "<group>"; };
+		5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMRecipesTableViewController.h; sourceTree = "<group>"; };
+		5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMRecipesTableViewController.m; sourceTree = "<group>"; };
+		5CD654F718F2206D0015E244 /* GEMMealPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMMealPlanViewController.h; sourceTree = "<group>"; };
+		5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMMealPlanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +130,12 @@
 				5CD654BF18EE5FE70015E244 /* GEMAppDelegate.m */,
 				5CD654C118EE5FE70015E244 /* Main_iPhone.storyboard */,
 				5CD654C418EE5FE70015E244 /* Main_iPad.storyboard */,
-				5CD654C718EE5FE70015E244 /* GEMViewController.h */,
-				5CD654C818EE5FE70015E244 /* GEMViewController.m */,
+				5CD654FD18F221A20015E244 /* Sidebar */,
+				5CD654FC18F2218A0015E244 /* Shopping */,
+				5CD654FB18F221400015E244 /* Recipes */,
+				5CD654FA18F221350015E244 /* Meal Plan */,
 				5CD654CA18EE5FE70015E244 /* Images.xcassets */,
+				5CD654E718F1D3730015E244 /* Library */,
 				5CD654B618EE5FE70015E244 /* Supporting Files */,
 			);
 			path = "Colab-a-list";
@@ -153,6 +168,52 @@
 				5CD654DA18EE5FE70015E244 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CD654E718F1D3730015E244 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654E818F1D3730015E244 /* SWRevealViewController.h */,
+				5CD654E918F1D3730015E244 /* SWRevealViewController.m */,
+			);
+			name = Library;
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		5CD654FA18F221350015E244 /* Meal Plan */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654F718F2206D0015E244 /* GEMMealPlanViewController.h */,
+				5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */,
+			);
+			name = "Meal Plan";
+			sourceTree = "<group>";
+		};
+		5CD654FB18F221400015E244 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */,
+				5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		5CD654FC18F2218A0015E244 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654F118F1F3480015E244 /* GEMShoppingListTableViewController.h */,
+				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
+			);
+			name = Shopping;
+			sourceTree = "<group>";
+		};
+		5CD654FD18F221A20015E244 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				5CD654EE18F1F1F70015E244 /* GEMSideBarTableViewController.h */,
+				5CD654EF18F1F1F70015E244 /* GEMSideBarTableViewController.m */,
+			);
+			name = Sidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */,
 				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
-				5CD654C918EE5FE70015E244 /* GEMViewController.m in Sources */,
+				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
+				5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */,
+				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
+				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
