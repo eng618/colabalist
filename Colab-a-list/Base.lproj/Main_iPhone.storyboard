@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXq-oY-qmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-785" y="176"/>
+            <point key="canvasLocation" x="-1161" y="160"/>
         </scene>
         <!--Meal Plan View Controller - Colab-a-list-->
         <scene sceneID="Scp-M4-rql">
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJf-6Z-s2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="176"/>
+            <point key="canvasLocation" x="-131" y="160"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="a7y-f2-pph">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n29-2o-79L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1654" y="-580"/>
+            <point key="canvasLocation" x="-2030" y="-596"/>
         </scene>
         <!--Side Bar Table View Controller-->
         <scene sceneID="YLc-l8-XcD">
@@ -239,7 +239,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXO-is-PK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1191" y="-1208"/>
+            <point key="canvasLocation" x="-1567" y="-1224"/>
         </scene>
         <!--Recipes Table View Controller - Colab-a-list-->
         <scene sceneID="2Nh-VH-Ch2">
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEj-Hx-k7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277" y="176"/>
+            <point key="canvasLocation" x="-653" y="160"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="faI-L5-4Ya">
@@ -326,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY3-aE-7Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755" y="-580"/>
+            <point key="canvasLocation" x="379" y="-596"/>
         </scene>
         <!--Navigation Controller - Shopping-->
         <scene sceneID="CWE-Ad-nVf">
@@ -345,7 +345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGH-71-Jhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-785" y="-580"/>
+            <point key="canvasLocation" x="-1161" y="-596"/>
         </scene>
         <!--Navigation Controller - Recipes-->
         <scene sceneID="aDR-L2-ezn">
@@ -364,7 +364,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLv-1b-naj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277" y="-580"/>
+            <point key="canvasLocation" x="-653" y="-596"/>
         </scene>
         <!--Navigation Controller - Meals-->
         <scene sceneID="b1z-ed-hKP">
@@ -383,7 +383,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STp-kb-ZJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="-580"/>
+            <point key="canvasLocation" x="-131" y="-596"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B845A919-ECDC-4B70-A033-E82D1C5A7747</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Colab-a-list</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>58F97A31-ABB8-4BFA-91A5-6F0468888BBC</key>
+		<string>https://github.com/ENG618/colabalist.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Colab-a-list.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>58F97A31-ABB8-4BFA-91A5-6F0468888BBC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ENG618/colabalist.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>58F97A31-ABB8-4BFA-91A5-6F0468888BBC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>58F97A31-ABB8-4BFA-91A5-6F0468888BBC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Colab-a-list</string>
+		</dict>
+	</array>
+</dict>
+</plist>

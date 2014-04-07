@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
+		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5CD654B018EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
 		5CD654B218EE5FE70015E244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B118EE5FE70015E244 /* CoreGraphics.framework */; };
 		5CD654B418EE5FE70015E244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B318EE5FE70015E244 /* UIKit.framework */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
+		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
+		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
+		5C3FF84318F236B900794524 /* GEMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItem.m; sourceTree = "<group>"; };
 		5CD654AC18EE5FE70015E244 /* Colab-a-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colab-a-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD654AF18EE5FE70015E244 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CD654B118EE5FE70015E244 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -203,6 +209,10 @@
 			children = (
 				5CD654F118F1F3480015E244 /* GEMShoppingListTableViewController.h */,
 				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
+				5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */,
+				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
+				5C3FF84218F236B900794524 /* GEMItem.h */,
+				5C3FF84318F236B900794524 /* GEMItem.m */,
 			);
 			name = Shopping;
 			sourceTree = "<group>";
@@ -320,6 +330,8 @@
 				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
 				5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */,
+				5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */,
+				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
 				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
 			);
@@ -536,6 +548,7 @@
 				5CD654E318EE5FE70015E244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CD654E418EE5FE70015E244 /* Build configuration list for PBXNativeTarget "Colab-a-listTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +557,7 @@
 				5CD654E618EE5FE70015E244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

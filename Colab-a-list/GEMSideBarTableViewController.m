@@ -11,7 +11,7 @@
 
 @interface GEMSideBarTableViewController ()
 
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation GEMSideBarTableViewController
@@ -39,7 +39,10 @@
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    _menuItems = @[@"shopping", @"recipe", @"mealPlan", @"settings", @"about"];
+    //_menuItems = @[@"shopping", @"recipe", @"mealPlan", @"settings", @"about"];
+    
+    _menuItems = [[NSMutableArray alloc]initWithObjects:@"shopping", @"recipe", @"mealPlan", @"settings", @"about", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
