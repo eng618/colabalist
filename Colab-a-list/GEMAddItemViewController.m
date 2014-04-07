@@ -42,7 +42,7 @@
 - (IBAction)onCancel:(id)sender
 {
     // Cancel add item
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

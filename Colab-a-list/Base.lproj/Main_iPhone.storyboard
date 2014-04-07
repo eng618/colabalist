@@ -46,7 +46,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Colab-a-list" id="pdY-5s-aiu">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="dER-8B-RBm"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OsF-rQ-2zV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OsF-rQ-2zV">
+                            <connections>
+                                <segue destination="RCd-VH-vng" kind="modal" id="jmh-Q4-Uvn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="sidebarButton" destination="dER-8B-RBm" id="9lQ-Nc-8Ac"/>
@@ -55,6 +59,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXq-oY-qmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1161" y="160"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="fgG-9f-MYq">
+            <objects>
+                <viewController id="RCd-VH-vng" customClass="GEMAddItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fzr-Os-RDA"/>
+                        <viewControllerLayoutGuide type="bottom" id="DhP-Hm-lJE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u71-88-TIH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4i2-Nw-hDk">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="YQT-fq-Jrs">
+                                        <connections>
+                                            <action selector="onCancel:" destination="RCd-VH-vng" id="UBO-iF-nGo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hpr-ea-wO7"/>
+                                    <barButtonItem systemItem="save" id="8Ax-Qr-mUh">
+                                        <connections>
+                                            <action selector="onSave:" destination="RCd-VH-vng" id="xIe-n6-dYL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNq-aN-Ijz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1161" y="933"/>
         </scene>
         <!--Meal Plan View Controller - Colab-a-list-->
         <scene sceneID="Scp-M4-rql">

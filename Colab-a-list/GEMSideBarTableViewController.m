@@ -43,6 +43,8 @@
     
     _menuItems = [[NSMutableArray alloc]initWithObjects:@"shopping", @"recipe", @"mealPlan", @"settings", @"about", nil];
     
+    NSLog(@"%@", _menuItems);
+    
 }
 
 - (void)didReceiveMemoryWarning
