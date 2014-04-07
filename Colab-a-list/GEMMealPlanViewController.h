@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GEMMealPlanViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

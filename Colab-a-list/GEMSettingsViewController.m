@@ -7,6 +7,7 @@
 //
 
 #import "GEMSettingsViewController.h"
+#import "SWRevealViewController.h"
 
 @interface GEMSettingsViewController ()
 
@@ -27,6 +28,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(revealToggle:)];
+    self.navigationItem.leftBarButtonItem = menuBtn;
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    //_sidebarButton.target = self.revealViewController;
+    //_sidebarButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
