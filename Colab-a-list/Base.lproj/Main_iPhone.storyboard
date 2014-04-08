@@ -147,15 +147,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-hb-t4r">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="W4R-tl-Kca">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="0Kf-Zy-0LF"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -163,9 +154,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="ozh-8T-5cs"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="y3C-dw-UY7"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sidebarButton" destination="0Kf-Zy-0LF" id="527-LW-mvQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJf-6Z-s2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n29-2o-79L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1682" y="-1356"/>
+            <point key="canvasLocation" x="-1682" y="-612"/>
         </scene>
         <!--Side Bar Table View Controller-->
         <scene sceneID="YLc-l8-XcD">
@@ -363,7 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXO-is-PK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1161" y="-1356"/>
+            <point key="canvasLocation" x="-1161" y="-612"/>
         </scene>
         <!--Recipes Table View Controller - Colab-a-list-->
         <scene sceneID="2Nh-VH-Ch2">
@@ -436,7 +424,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGH-71-Jhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1161" y="-596"/>
+            <point key="canvasLocation" x="-1682" y="167"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -49,6 +49,9 @@
 - (IBAction)onSave:(id)sender
 {
     // Save code goes here
+    UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:@"This button will save your data once completed :)" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+    
+    [saveAlert show];
 }
 
 /*
