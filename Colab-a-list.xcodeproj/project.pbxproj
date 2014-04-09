@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C0EA41118F38B630065545C /* GEMItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41018F38B630065545C /* GEMItemManager.m */; };
+		5C0EA41418F515410065545C /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41218F515410065545C /* launchImage2x.png */; };
+		5C0EA41518F515410065545C /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41318F515410065545C /* launchImageR4.png */; };
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		5C0EA40F18F38B630065545C /* GEMItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItemManager.h; sourceTree = "<group>"; };
 		5C0EA41018F38B630065545C /* GEMItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemManager.m; sourceTree = "<group>"; };
+		5C0EA41218F515410065545C /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
+		5C0EA41318F515410065545C /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
 		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
 		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
 		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0EA41618F5154B0065545C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5C0EA41218F515410065545C /* launchImage2x.png */,
+				5C0EA41318F515410065545C /* launchImageR4.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		5C3FF84818F263F800794524 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 				5CD654FA18F221350015E244 /* Meal Plan */,
 				5C3FF84818F263F800794524 /* Settings */,
 				5C3FF84C18F2641E00794524 /* About */,
+				5C0EA41618F5154B0065545C /* Images */,
 				5CD654CA18EE5FE70015E244 /* Images.xcassets */,
 				5CD654E718F1D3730015E244 /* Library */,
 				5CD654B618EE5FE70015E244 /* Supporting Files */,
@@ -334,10 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0EA41518F515410065545C /* launchImageR4.png in Resources */,
 				5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */,
 				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
 				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
+				5C0EA41418F515410065545C /* launchImage2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
