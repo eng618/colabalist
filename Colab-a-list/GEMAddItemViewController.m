@@ -7,6 +7,7 @@
 //
 
 #import "GEMAddItemViewController.h"
+#import "GEMItem.h"
 
 @interface GEMAddItemViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
@@ -51,9 +52,28 @@
 - (IBAction)onSave:(id)sender
 {
     // Save code goes here
-    UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:@"This button will save your data once completed :)" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
     
-    [saveAlert show];
+    // Instantiate custom item object
+    GEMItem *item = [[GEMItem alloc] init];
+    // Obtain values from user input fields
+    item.item = self.itemField.text;
+    //item.quantity = self.quantityText.text;
+    NSLog(@"The item is: %@ and the quantaty is: %@", item, self.quantityText.text);
+    
+    
+    // Instantiate Item Manager
+    GEMItemManager *itemManager = [[GEMItemManager alloc] init];
+    // Check validity
+    if (itemManager) {
+        [itemManager.items addObject:item];
+        // Create UI alert view
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@", item.item] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+        
+        // Show alert view
+        [saveAlert show];
+    }
+    
+    
 }
 
 /*
