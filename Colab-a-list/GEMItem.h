@@ -13,6 +13,7 @@
 @property (nonatomic) NSString *item;
 //@property (nonatomic) NSInteger *quantity;
 @property (nonatomic) NSInteger *quantity;
+@property (nonatomic) NSString *category;
 @property (nonatomic) NSString *notes;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "GEMShoppingListTableViewController.h"
 #import "SWRevealViewController.h"
+#import "GEMItem.h"
 
 @interface GEMShoppingListTableViewController ()
 
@@ -35,6 +36,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Load dummy data into array to test app
+    GEMItem *item = [[GEMItem alloc] init];
+    item.item = 
     
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.

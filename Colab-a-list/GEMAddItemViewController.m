@@ -12,6 +12,7 @@
 @interface GEMAddItemViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
 @property (strong, nonatomic) IBOutlet UITextField *quantityText;
+@property (strong, nonatomic) IBOutlet UIPickerView *categoryPicker;
 
 @end
 
