@@ -11,4 +11,6 @@
 
 @interface GEMAddItemViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property NSArray *categories;
+
 @end
