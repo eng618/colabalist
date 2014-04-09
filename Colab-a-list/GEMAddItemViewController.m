@@ -10,8 +10,9 @@
 #import "GEMItem.h"
 
 @interface GEMAddItemViewController ()
+// Form outlets
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
-@property (strong, nonatomic) IBOutlet UITextField *quantityText;
+@property (strong, nonatomic) IBOutlet UITextField *quantityField;
 @property (strong, nonatomic) IBOutlet UIPickerView *categoryPicker;
 
 @end
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Set categories for new items
     self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Uncategorized"];
     
 
@@ -77,8 +79,13 @@
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
     item.item = self.itemField.text;
-    //item.quantity = self.quantityText.text;
-    NSLog(@"The item is: %@ and the quantaty is: %@", item, self.quantityText.text);
+    //item.quantity = self.quantityField.text;
+    
+    // Obtain row selected
+    NSInteger row = [self.categoryPicker selectedRowInComponent:0];
+    // Find value from array
+    item.category = [self.categories objectAtIndex:row];
+    NSLog(@"The item is: %@ and the quantaty is: %@", item, self.quantityField.text);
     
     
     // Instantiate Item Manager

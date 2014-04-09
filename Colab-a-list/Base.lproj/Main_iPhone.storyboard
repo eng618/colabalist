@@ -141,7 +141,7 @@
                     <connections>
                         <outlet property="categoryPicker" destination="X6A-mH-HKj" id="JaG-CC-U0f"/>
                         <outlet property="itemField" destination="U3y-iU-Ofk" id="OVV-jP-jfO"/>
-                        <outlet property="quantityText" destination="3Uu-fI-8ZQ" id="aH1-1d-5vc"/>
+                        <outlet property="quantityField" destination="3Uu-fI-8ZQ" id="l65-K7-Lr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNq-aN-Ijz" userLabel="First Responder" sceneMemberID="firstResponder"/>
