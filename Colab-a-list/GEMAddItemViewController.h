@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMItemManager.h"
 
 @interface GEMAddItemViewController : UIViewController
 

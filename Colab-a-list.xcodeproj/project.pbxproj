@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0EA41118F38B630065545C /* GEMItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41018F38B630065545C /* GEMItemManager.m */; };
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0EA40F18F38B630065545C /* GEMItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItemManager.h; sourceTree = "<group>"; };
+		5C0EA41018F38B630065545C /* GEMItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemManager.m; sourceTree = "<group>"; };
 		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
 		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
 		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,
 				5C3FF84318F236B900794524 /* GEMItem.m */,
+				5C0EA40F18F38B630065545C /* GEMItemManager.h */,
+				5C0EA41018F38B630065545C /* GEMItemManager.m */,
 			);
 			name = Shopping;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			files = (
 				5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */,
 				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
+				5C0EA41118F38B630065545C /* GEMItemManager.m in Sources */,
 				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
 				5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */,

@@ -9,6 +9,8 @@
 #import "GEMAddItemViewController.h"
 
 @interface GEMAddItemViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *itemField;
+@property (strong, nonatomic) IBOutlet UITextField *quantityText;
 
 @end
 
