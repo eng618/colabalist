@@ -10,6 +10,7 @@
 		5C0EA41118F38B630065545C /* GEMItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41018F38B630065545C /* GEMItemManager.m */; };
 		5C0EA41418F515410065545C /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41218F515410065545C /* launchImage2x.png */; };
 		5C0EA41518F515410065545C /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41318F515410065545C /* launchImageR4.png */; };
+		5C0EA41918F517DF0065545C /* GEMItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */; };
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
@@ -50,6 +51,8 @@
 		5C0EA41018F38B630065545C /* GEMItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemManager.m; sourceTree = "<group>"; };
 		5C0EA41218F515410065545C /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
 		5C0EA41318F515410065545C /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
+		5C0EA41718F517DF0065545C /* GEMItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItemDetailViewController.h; sourceTree = "<group>"; };
+		5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemDetailViewController.m; sourceTree = "<group>"; };
 		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
 		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
 		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
 				5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */,
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
+				5C0EA41718F517DF0065545C /* GEMItemDetailViewController.h */,
+				5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,
 				5C3FF84318F236B900794524 /* GEMItem.m */,
 				5C0EA40F18F38B630065545C /* GEMItemManager.h */,
@@ -382,6 +387,7 @@
 				5C3FF84B18F2641300794524 /* GEMAboutViewController.m in Sources */,
 				5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */,
 				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
+				5C0EA41918F517DF0065545C /* GEMItemDetailViewController.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
 				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
 			);

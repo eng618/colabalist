@@ -36,6 +36,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qLe-rI-aXR" kind="modal" id="Wot-XK-2zl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -183,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJf-6Z-s2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="167"/>
+            <point key="canvasLocation" x="957" y="167"/>
         </scene>
         <!--Settings View Controller - Colab-a-list-->
         <scene sceneID="hV0-6m-hj8">
@@ -214,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx8-oM-UHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="152"/>
+            <point key="canvasLocation" x="1435" y="152"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="a7y-f2-pph">
@@ -379,6 +382,24 @@
             </objects>
             <point key="canvasLocation" x="-1161" y="-612"/>
         </scene>
+        <!--Item Detail View Controller-->
+        <scene sceneID="EV7-3b-904">
+            <objects>
+                <viewController id="qLe-rI-aXR" customClass="GEMItemDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t5b-me-sY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jbg-fS-Wyh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Je-yg-R6C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rg-rH-fMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689" y="933"/>
+        </scene>
         <!--Recipes Table View Controller - Colab-a-list-->
         <scene sceneID="2Nh-VH-Ch2">
             <objects>
@@ -420,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEj-Hx-k7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-561" y="167"/>
+            <point key="canvasLocation" x="435" y="167"/>
         </scene>
         <!--About View Controller - Title-->
         <scene sceneID="faI-L5-4Ya">
@@ -434,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY3-aE-7Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="152"/>
+            <point key="canvasLocation" x="1883" y="152"/>
         </scene>
         <!--Navigation Controller - Shopping-->
         <scene sceneID="CWE-Ad-nVf">
