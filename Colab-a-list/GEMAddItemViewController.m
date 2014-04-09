@@ -79,7 +79,7 @@
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
     item.item = self.itemField.text;
-    //item.quantity = self.quantityField.text;
+    item.qty = self.quantityField.text;
     
     // Obtain row selected
     NSInteger row = [self.categoryPicker selectedRowInComponent:0];
@@ -94,7 +94,7 @@
     if (itemManager) {
         [itemManager.items addObject:item];
         // Create UI alert view
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@", item.item] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ on %@", [item item], [item qty]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
         
         // Show alert view
         [saveAlert show];
