@@ -188,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="957" y="167"/>
         </scene>
-        <!--Settings View Controller - Colab-a-list-->
+        <!--Settings View Controller-->
         <scene sceneID="hV0-6m-hj8">
             <objects>
                 <viewController id="S49-nM-Wmf" customClass="GEMSettingsViewController" sceneMemberID="viewController">
@@ -210,14 +210,64 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Colab-a-list" id="XX4-PI-TV7">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="9sT-lh-RTg"/>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx8-oM-UHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1435" y="152"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="uU7-VS-vca">
+            <objects>
+                <viewController id="5ks-bq-xbR" customClass="GEMAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v2u-ID-Nb7"/>
+                        <viewControllerLayoutGuide type="bottom" id="HUS-MS-eBx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R9a-uR-GRP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-eh-UEd">
+                                <rect key="frame" x="131" y="353" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Google+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googlePlusLink:" destination="5ks-bq-xbR" eventType="touchUpInside" id="xRx-Lw-QeK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VA-QF-5yL">
+                                <rect key="frame" x="126" y="391" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLink:" destination="5ks-bq-xbR" eventType="touchUpInside" id="akO-ES-GRK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eo-40-U0y">
+                                <rect key="frame" x="137" y="429" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterLink:" destination="5ks-bq-xbR" eventType="touchUpInside" id="Ezj-Nw-SLG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="8DI-sq-QrI" kind="modal" identifier="webSegue" id="IVy-W9-27X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frF-uv-L1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="159"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="a7y-f2-pph">
@@ -367,7 +417,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="AAt-ng-dzd" kind="custom" customClass="SWRevealViewControllerSegue" id="9Gn-nf-yAm"/>
+                                    <segue destination="5ks-bq-xbR" kind="custom" customClass="SWRevealViewControllerSegue" id="64F-iW-JHN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -443,19 +493,30 @@
             </objects>
             <point key="canvasLocation" x="435" y="167"/>
         </scene>
-        <!--About View Controller - Title-->
-        <scene sceneID="faI-L5-4Ya">
+        <!--Web View Controller-->
+        <scene sceneID="sAA-ks-fHq">
             <objects>
-                <viewController id="AAt-ng-dzd" customClass="GEMAboutViewController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="t2Y-Rl-cpy">
-                        <barButtonItem key="rightBarButtonItem" title="Menu" id="0xX-b9-UNq"/>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                <viewController id="8DI-sq-QrI" customClass="GEMWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wQw-RI-m1V"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Vy-C0-TL5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EoT-nf-KHc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-2k-6n1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wY3-aE-7Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gA-Ux-tlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="152"/>
+            <point key="canvasLocation" x="1900" y="1029"/>
         </scene>
         <!--Navigation Controller - Shopping-->
         <scene sceneID="CWE-Ad-nVf">
