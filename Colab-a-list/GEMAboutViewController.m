@@ -47,13 +47,24 @@
 
 #pragma mark - Buttons
 
-- (IBAction)googlePlusLink:(id)sender {
+- (IBAction)googlePlusLink:(id)sender
+{
+    NSString *fullURL = @"https://plus.google.com/+EricGarcia";
+    NSURL *url = [NSURL URLWithString:fullURL];
+    
+    [self performSegueWithIdentifier:@"webSegue" sender:self];
 }
 
-- (IBAction)facebookLink:(id)sender {
+- (IBAction)facebookLink:(id)sender
+{
+    NSString *fullURL = @"https://www.facebook.com/garciaericn";
+    NSURL *url = [NSURL URLWithString:fullURL];
 }
 
-- (IBAction)twitterLink:(id)sender {
+- (IBAction)twitterLink:(id)sender
+{
+    NSString *fullURL = @"https://twitter.com/garciaericn";
+    NSURL *url = [NSURL URLWithString:fullURL];
 }
 
 #pragma mark - Navigation
@@ -64,6 +75,7 @@
     // Get the new view controller using [segue destinationViewController].
     GEMWebViewController *wvc = [segue destinationViewController];
     // Pass the selected object to the new view controller.
+    
 }
 
 

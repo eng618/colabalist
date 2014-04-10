@@ -10,4 +10,6 @@
 
 @interface GEMWebViewController : UIViewController
 
+@property (nonatomic) NSURL *webURL;
+
 @end
