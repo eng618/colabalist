@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shoppingCell" textLabel="sSZ-Qz-NLJ" detailTextLabel="9BM-L3-bbu" style="IBUITableViewCellStyleSubtitle" id="Zi6-XQ-lEj">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zi6-XQ-lEj" id="75w-Jy-IIv">
                                     <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
@@ -152,6 +152,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNq-aN-Ijz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1181" y="645"/>
+        </scene>
+        <!--Recipes Table View Controller-->
+        <scene sceneID="deC-mx-NqY">
+            <objects>
+                <tableViewController id="kXb-T5-Wvl" customClass="GEMRecipesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rmH-3k-bPS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dcy-BY-gjx">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcy-BY-gjx" id="aPu-zC-xVN">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kXb-T5-Wvl" id="pXE-0x-b4z"/>
+                            <outlet property="delegate" destination="kXb-T5-Wvl" id="8HT-dk-tq1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjo-Sn-wIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-121"/>
         </scene>
         <!--Meal Plan View Controller - Colab-a-list-->
         <scene sceneID="Scp-M4-rql">
@@ -342,7 +370,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="R0t-s9-J4l" kind="custom" customClass="SWRevealViewControllerSegue" id="zGb-Kb-G8z"/>
+                                    <segue destination="kXb-T5-Wvl" kind="custom" customClass="SWRevealViewControllerSegue" id="DcN-yw-WNd"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mealPlan" id="maG-NI-uaZ">
@@ -447,46 +475,6 @@
             </objects>
             <point key="canvasLocation" x="-709" y="645"/>
         </scene>
-        <!--Recipes Table View Controller - Colab-a-list-->
-        <scene sceneID="2Nh-VH-Ch2">
-            <objects>
-                <viewController id="R0t-s9-J4l" customClass="GEMRecipesTableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JqK-yw-DE8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Poe-LY-IoA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WhF-3K-Wx8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nAK-gy-E14">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeCell" id="e47-XB-Zjo">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e47-XB-Zjo" id="ugo-sX-rx5">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Colab-a-list" id="ys9-G8-INa">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="TNH-HF-B60"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vHR-ak-e4K"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jEj-Hx-k7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-125" y="-113"/>
-        </scene>
         <!--Web View Controller-->
         <scene sceneID="sAA-ks-fHq">
             <objects>
@@ -543,7 +531,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NWb-Yj-rag"/>
+        <segue reference="7Bq-vG-N66"/>
         <segue reference="IVy-W9-27X"/>
     </inferredMetricsTieBreakers>
 </document>
