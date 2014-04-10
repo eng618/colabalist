@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GEMRecipesTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

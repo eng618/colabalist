@@ -10,6 +10,5 @@
 #import "GEMItemManager.h"
 
 @interface GEMShoppingListTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

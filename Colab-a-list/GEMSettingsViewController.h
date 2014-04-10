@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GEMSettingsViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

@@ -29,15 +29,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = menuBtn;
-    
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    //_sidebarButton.target = self.revealViewController;
-    //_sidebarButton.action = @selector(revealToggle:);
-    
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    // Create barbutton item
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
+    
+    // Show barButton item
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

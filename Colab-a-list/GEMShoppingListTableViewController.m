@@ -37,15 +37,17 @@
     
     // Load dummy data into array to test app
     GEMItem *item = [[GEMItem alloc] init];
-    item.item = 
+    //item.item = item.text
     
-    
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _sidebarButton.target = self.revealViewController;
-    _sidebarButton.action = @selector(revealToggle:);
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    // Create barbutton item
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
+    
+    // Show barButton item
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
 }
 
 - (void) viewDidAppear:(BOOL)animated

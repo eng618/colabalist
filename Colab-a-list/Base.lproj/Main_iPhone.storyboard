@@ -48,16 +48,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Colab-a-list" id="pdY-5s-aiu">
-                        <barButtonItem key="leftBarButtonItem" image="menuIcon.png" id="dER-8B-RBm"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OsF-rQ-2zV">
                             <connections>
                                 <segue destination="RCd-VH-vng" kind="modal" id="jmh-Q4-Uvn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sidebarButton" destination="dER-8B-RBm" id="9lQ-Nc-8Ac"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXq-oY-qmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -486,9 +482,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="TNH-HF-B60"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vHR-ak-e4K"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sidebarButton" destination="TNH-HF-B60" id="Lt1-U2-BF7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEj-Hx-k7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -544,9 +537,6 @@
             <point key="canvasLocation" x="-1702" y="-121"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="menuIcon.png" width="44" height="44"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
