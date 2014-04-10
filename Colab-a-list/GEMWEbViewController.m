@@ -14,6 +14,7 @@
 @end
 
 @implementation GEMWebViewController
+@synthesize webURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,9 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString *fullURL = @"https://plus.google.com/+EricGarcia";
-    NSURL *url = [NSURL URLWithString:fullURL];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    //NSString *fullURL = @"https://plus.google.com/+EricGarcia";
+    //NSURL *url = [NSURL URLWithString:fullURL];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:webURL];
     [_webView loadRequest:requestObj];
 }
 

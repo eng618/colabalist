@@ -11,4 +11,6 @@
 
 @interface GEMAboutViewController : UIViewController
 
+@property (nonatomic) NSURL *url;
+
 @end
