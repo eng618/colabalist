@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMWebViewController.h"
 
 @interface GEMAboutViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;

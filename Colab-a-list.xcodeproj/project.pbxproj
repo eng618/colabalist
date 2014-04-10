@@ -35,6 +35,7 @@
 		5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */; };
 		5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */; };
 		5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */; };
+		5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC82C18F6618600FAC4A2 /* menuIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMRecipesTableViewController.m; sourceTree = "<group>"; };
 		5CD654F718F2206D0015E244 /* GEMMealPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMMealPlanViewController.h; sourceTree = "<group>"; };
 		5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMMealPlanViewController.m; sourceTree = "<group>"; };
+		5CECC82C18F6618600FAC4A2 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				5C0EA41218F515410065545C /* launchImage2x.png */,
 				5C0EA41318F515410065545C /* launchImageR4.png */,
+				5CECC82C18F6618600FAC4A2 /* menuIcon.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */,
 				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
 				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
+				5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
 				5C0EA41418F515410065545C /* launchImage2x.png in Resources */,
 			);
