@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
 @property (strong, nonatomic) IBOutlet UITextField *quantityField;
 @property (strong, nonatomic) IBOutlet UIPickerView *categoryPicker;
+@property (strong, nonatomic) IBOutlet UITextView *notesField;
 
 @end
 
