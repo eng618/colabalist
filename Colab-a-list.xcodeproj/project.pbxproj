@@ -39,6 +39,7 @@
 		5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */; };
 		5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */; };
 		5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */; };
+		5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83A18F7956600FAC4A2 /* turkey.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-g-plus-icon-64.png"; sourceTree = "<group>"; };
 		5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-f-Logo__blue_72.png"; sourceTree = "<group>"; };
 		5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue.png; sourceTree = "<group>"; };
+		5CECC83A18F7956600FAC4A2 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */,
 				5C0EA41318F515410065545C /* launchImageR4.png */,
 				5CECC82C18F6618600FAC4A2 /* menuIcon.png */,
+				5CECC83A18F7956600FAC4A2 /* turkey.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */,
 				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
 				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
+				5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */,
 				5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */,
 				5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
