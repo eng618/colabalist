@@ -95,7 +95,7 @@
     if (manager) {
         [manager.items addObject:item];
         // Create UI alert view
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ on %@", [item item], [item qty]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ to your shopping list", [item item]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
         
         // Show alert view
         [saveAlert show];

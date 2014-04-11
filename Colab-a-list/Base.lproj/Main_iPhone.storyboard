@@ -37,7 +37,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="qLe-rI-aXR" kind="modal" id="Wot-XK-2zl"/>
+                                    <segue destination="qLe-rI-aXR" kind="push" id="Wot-XK-2zl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

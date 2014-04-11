@@ -39,6 +39,7 @@
     //GEMItem *item = [[GEMItem alloc] init];
     //item.item = item.text
     
+    /*
     // Return the number of sections.
     GEMItemManager *manager = [GEMItemManager storedItems];
     if (manager) {
@@ -50,6 +51,7 @@
         
         [manager.items addObject:item];
     }
+     */
     
     
     
