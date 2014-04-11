@@ -90,15 +90,17 @@
     
     
     // Instantiate Item Manager
-    GEMItemManager *itemManager = [[GEMItemManager alloc] init];
+    GEMItemManager *manager = [GEMItemManager storedItems];
     // Check validity
-    if (itemManager) {
-        [itemManager.items addObject:item];
+    if (manager) {
+        [manager.items addObject:item];
         // Create UI alert view
         UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ on %@", [item item], [item qty]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
         
         // Show alert view
         [saveAlert show];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     
     
