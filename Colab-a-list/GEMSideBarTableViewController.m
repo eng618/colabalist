@@ -36,9 +36,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Settings for sidebar
-    self.view.backgroundColor = [UIColor colorWithWhite:02.f alpha:1.0f];
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+
     
     // Creating list of menu items
     _menuItems = [[NSMutableArray alloc]initWithObjects:@"shopping", @"recipe", @"mealPlan", @"settings", @"about", nil];
