@@ -10,4 +10,15 @@
 
 @interface GEMRecipe : NSObject
 
+@property NSString *recipeName;
+@property UIImage *recipeImage;
+@property NSString *recipeDescription;
+@property NSString *recipeServings;
+@property NSString *recipeCookTime;
+@property NSString *recipeingredient;
+@property NSMutableArray *recipeIngredis;
+@property NSString *recipeSourse;
+@property NSURL *recipeURL;
+
+
 @end
