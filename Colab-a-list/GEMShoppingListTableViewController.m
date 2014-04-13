@@ -114,7 +114,7 @@
         
         // Set text
         cell.textLabel.text = [current item];
-        cell.detailTextLabel.text = [current qty];
+        //cell.detailTextLabel.text = [current qty];
         
         
         

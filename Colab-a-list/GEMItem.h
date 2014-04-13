@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GEMItem : NSObject
+@interface GEMItem : NSObject <NSCoding>
 
-@property (nonatomic) NSString *item;
-//@property (nonatomic) NSInteger *quantity;
-@property (nonatomic) NSString *qty;
-@property (nonatomic) NSString *category;
-@property (nonatomic) NSString *notes;
+@property NSString *uuid;
+@property NSString *item;
+@property float qty;
+@property float price;
+@property NSString *category;
+@property NSString *notes;
+@property BOOL inShoppingList;
 
 @end

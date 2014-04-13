@@ -80,7 +80,7 @@
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
     item.item = self.itemField.text;
-    item.qty = self.quantityField.text;
+    //item.qty = self.quantityField.text;
     
     // Obtain row selected
     NSInteger row = [self.categoryPicker selectedRowInComponent:0];

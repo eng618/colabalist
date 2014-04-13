@@ -37,13 +37,19 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    // Create barbutton item
+    // Create manu barbutton item
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
+    // Create addItem barbutton item
     UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:nil];
     
-    // Show barButton item
+    // Show barButton items
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     self.navigationItem.rightBarButtonItem = addButtonItem;
+    
+    // Testing AFNetworking
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
