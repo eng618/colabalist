@@ -11,11 +11,13 @@
 @interface GEMItem : NSObject <NSCoding>
 
 @property NSString *uuid;
-@property NSString *item;
+@property NSString *name;
 @property float qty;
 @property float price;
 @property NSString *category;
 @property NSString *notes;
 @property BOOL inShoppingList;
+
++ (GEMItem *)createItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
 
 @end

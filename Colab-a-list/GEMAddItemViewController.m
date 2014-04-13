@@ -79,7 +79,7 @@
     // Instantiate custom item object
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
-    item.item = self.itemField.text;
+    item.name = self.itemField.text;
     //item.qty = self.quantityField.text;
     
     // Obtain row selected
@@ -95,7 +95,7 @@
     if (manager) {
         [manager.items addObject:item];
         // Create UI alert view
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ to your shopping list", [item item]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ to your shopping list", [item name]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
         
         // Show alert view
         [saveAlert show];

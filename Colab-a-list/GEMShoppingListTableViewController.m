@@ -12,6 +12,8 @@
 
 @interface GEMShoppingListTableViewController ()
 
+@property NSMutableArray *items;
+
 @end
 
 @implementation GEMShoppingListTableViewController
@@ -113,7 +115,7 @@
         GEMItem *current = [items objectAtIndex:indexPath.row];
         
         // Set text
-        cell.textLabel.text = [current item];
+        cell.textLabel.text = [current name];
         //cell.detailTextLabel.text = [current qty];
         
         
