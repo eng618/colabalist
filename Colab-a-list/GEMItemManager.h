@@ -10,11 +10,11 @@
 
 @interface GEMItemManager : NSObject
 {
-    NSMutableArray *items;
+    NSMutableArray *itemsFromManager;
 }
 
 +(GEMItemManager*)storedItems;
 
-@property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic, strong) NSMutableArray *itemsFromManager;
 
 @end

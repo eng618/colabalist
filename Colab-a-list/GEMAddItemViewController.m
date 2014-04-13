@@ -93,7 +93,7 @@
     GEMItemManager *manager = [GEMItemManager storedItems];
     // Check validity
     if (manager) {
-        [manager.items addObject:item];
+        [manager.itemsFromManager addObject:item];
         // Create UI alert view
         UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ to your shopping list", [item name]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
         

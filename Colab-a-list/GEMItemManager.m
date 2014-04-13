@@ -9,7 +9,8 @@
 #import "GEMItemManager.h"
 
 @implementation GEMItemManager
-@synthesize items;
+
+@synthesize itemsFromManager;
 
 static GEMItemManager *_storedItems;
 
@@ -24,7 +25,7 @@ static GEMItemManager *_storedItems;
 - (id) init
 {
     if ((self = [super init])) {
-        items = [[NSMutableArray alloc] init];
+        itemsFromManager = [[NSMutableArray alloc] init];
     }
     return self;
 }

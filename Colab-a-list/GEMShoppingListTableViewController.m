@@ -78,6 +78,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - Load/Save
+
+- (NSString *)pathForItems
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documents = [paths lastObject];
+    
+    return [documents stringByAppendingPathComponent:@"items.plist"];
+}
+
+- (void)loadItems
+{
+    NSString *filePath = [self pathForItems];
+    
+    // If file exists load it into privet items array
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        self.items = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    // Else instantiate an empty array
+    }else{
+        self.items = [NSMutableArray array];
+    }
+}
+
+# pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        // Set Title
+        self.title = @"Items";
+        
+        // Load items
+        [self loadItems];
+    }
+    return self;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -95,7 +134,7 @@
     // Check validity
     if (manager) {
         // Return number of items in array to populate table view
-        rows = [manager.items count];
+        rows = [manager.itemsFromManager count];
     }
     return rows;
 }
@@ -111,7 +150,7 @@
     // Check validity
     if (manager) {
         // Create instence of items array
-        NSMutableArray *items = [manager items];
+        NSMutableArray *items = [manager itemsFromManager];
         GEMItem *current = [items objectAtIndex:indexPath.row];
         
         // Set text
