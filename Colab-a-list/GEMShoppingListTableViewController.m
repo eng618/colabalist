@@ -80,6 +80,7 @@
 
 # pragma mark - Load/Save
 
+// Obtains path to application's list of items
 - (NSString *)pathForItems
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -88,6 +89,14 @@
     return [documents stringByAppendingPathComponent:@"items.plist"];
 }
 
+// Obtains the file path from helper method and saves files to it
+- (void)saveItems
+{
+    NSString *filePath = [self pathForItems];
+    [NSKeyedArchiver archiveRootObject:self.items toFile:filePath];
+}
+
+// Obtains the file path from helper method.  Unarchives it and saves it to privet mutable array.
 - (void)loadItems
 {
     NSString *filePath = [self pathForItems];
