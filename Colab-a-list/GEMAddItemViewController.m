@@ -13,6 +13,7 @@
 // Form outlets
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
 @property (strong, nonatomic) IBOutlet UITextField *quantityField;
+@property (strong, nonatomic) IBOutlet UITextField *priceField;
 @property (strong, nonatomic) IBOutlet UIPickerView *categoryPicker;
 @property (strong, nonatomic) IBOutlet UITextView *notesField;
 
@@ -75,14 +76,23 @@
 - (IBAction)onSave:(id)sender
 {
     // Save code goes here
+    // Extract user input
+    NSString *name = [self.itemField text];
+    float quantity = [[self.quantityField text] floatValue];
+    float price = [[self.priceField text] floatValue];
+    NSString *category = [self.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+    NSString *notes = [self.notesField text];
+    
+    // Notify delegate
+    [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+    
+    //Dismiss viewController
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     
     
     
-    
-    
-    
-    
+/*
     // Instantiate custom item object
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
@@ -110,7 +120,7 @@
         //Dismiss viewController
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    
+*/
     
 }
 
