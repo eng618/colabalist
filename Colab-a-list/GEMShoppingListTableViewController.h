@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GEMItemManager.h"
+#import "GEMAddItemViewController.h"
 
-@interface GEMShoppingListTableViewController : UITableViewController
+@interface GEMShoppingListTableViewController : UITableViewController <GEMAddItemViewControllerDelegate>
 
 @end

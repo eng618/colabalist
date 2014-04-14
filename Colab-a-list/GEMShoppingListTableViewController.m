@@ -35,11 +35,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // Load dummy data into array to test app
-    //GEMItem *item = [[GEMItem alloc] init];
-    //item.item = item.text
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Verify loading items from disk is functional
     NSLog(@"Items: %@", self.items);
@@ -126,6 +122,24 @@
     return self;
 }
 
+# pragma mark - GEMAddItemViewController Delegete
+
+- (void)didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes
+{
+    // Create item
+    GEMItem *item = [GEMItem createItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+    
+    //Add item to data source
+    [self.items addObject:item];
+    
+    //Add row to table view
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForItem:([self.items count] - 1) inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+    // Save items
+    [self saveItems];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -206,15 +220,22 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"addItemSegue"]) {
+        // Destination view controller
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        // Obtain add item view controller
+        GEMAddItemViewController *dvc = [nc.viewControllers firstObject];
+        
+        // Set delegate
+        [dvc setDelegate:self];
+    }
 }
-*/
+
 
 @end

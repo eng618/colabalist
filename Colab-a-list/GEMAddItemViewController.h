@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "GEMItemManager.h"
 
-@protocol GEMAddItemViewControllerDelegat <NSObject>
+@protocol GEMAddItemViewControllerDelegate <NSObject>
 
-- (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
+- (void)didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
 
 @end
 
 @interface GEMAddItemViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (weak) id<GEMAddItemViewControllerDelegat> delegate;
+@property (weak) id<GEMAddItemViewControllerDelegate> delegate;
 
 @property NSArray *categories;
 

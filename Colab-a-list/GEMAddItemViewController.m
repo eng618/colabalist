@@ -84,7 +84,7 @@
     NSString *notes = [self.notesField text];
     
     // Notify delegate
-    [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+    [self.delegate didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
     
     //Dismiss viewController
     [self dismissViewControllerAnimated:YES completion:nil];
