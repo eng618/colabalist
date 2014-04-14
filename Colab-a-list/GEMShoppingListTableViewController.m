@@ -42,16 +42,20 @@
     //item.item = item.text
     
     // Verify loading items from disk is functional
-    NSLog(@"Items > %@", self.items);
+    NSLog(@"Items: %@", self.items);
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    // Create barbutton item
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
+    // Create barbutton item for sidebar
+    UIBarButtonItem *revealButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
+    // Create barbutton item for addItem
+    UIBarButtonItem *addItemButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
-    // Show barButton item
-    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    // Show barButton item for sidebar
+    self.navigationItem.leftBarButtonItem = revealButton;
+    // Show barButton item for addItem
+    self.navigationItem.rightBarButtonItem = addItemButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -63,6 +67,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma mark - Button actions
+
+- (void)addItem:(id)sender
+{
+    NSLog(@"AddItem buttow was tapped");
+    // Preform segue
+    [self performSegueWithIdentifier:@"addItemSegue" sender:self];
 }
 
 # pragma mark - Load/Save
