@@ -41,21 +41,8 @@
     //GEMItem *item = [[GEMItem alloc] init];
     //item.item = item.text
     
-    /*
-    // Return the number of sections.
-    GEMItemManager *manager = [GEMItemManager storedItems];
-    if (manager) {
-        GEMItem *item = [[GEMItem alloc] init];
-        item.item = @"Milk";
-        item.qty = @"1 Gallon";
-        item.category = @"Dairy";
-        item.notes = @"Milk does a body good!";
-        
-        [manager.items addObject:item];
-    }
-     */
-    
-    
+    // Verify loading items from disk is functional
+    NSLog(@"Items > %@", self.items);
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -136,6 +123,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    /*
     // Return the number of rows in the section.
     int rows = 0;
     // Create instance of ItemManager
@@ -146,6 +134,8 @@
         rows = [manager.itemsFromManager count];
     }
     return rows;
+    */
+    return [self.items count];
 }
 
 

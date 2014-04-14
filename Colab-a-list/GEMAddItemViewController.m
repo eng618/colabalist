@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view.
     
     // Set categories for new items
-    self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Uncategorized"];
+    self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Office", @"Uncategorized"];
     
 
 }

@@ -37,6 +37,7 @@
 		5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */; };
 		5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */; };
 		5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */; };
+		5CE95EF618FB740700C92378 /* seed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CE95EF518FB740700C92378 /* seed.plist */; };
 		5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC82C18F6618600FAC4A2 /* menuIcon.png */; };
 		5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */; };
 		5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */; };
@@ -103,6 +104,7 @@
 		5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMRecipesTableViewController.m; sourceTree = "<group>"; };
 		5CD654F718F2206D0015E244 /* GEMMealPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMMealPlanViewController.h; sourceTree = "<group>"; };
 		5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMMealPlanViewController.m; sourceTree = "<group>"; };
+		5CE95EF518FB740700C92378 /* seed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = seed.plist; sourceTree = "<group>"; };
 		5CECC82C18F6618600FAC4A2 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
 		5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-g-plus-icon-64.png"; sourceTree = "<group>"; };
 		5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-f-Logo__blue_72.png"; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C0EA41618F5154B0065545C /* Images */ = {
+		5C0EA41618F5154B0065545C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				5C0EA41218F515410065545C /* launchImage2x.png */,
@@ -144,8 +146,9 @@
 				5C0EA41318F515410065545C /* launchImageR4.png */,
 				5CECC82C18F6618600FAC4A2 /* menuIcon.png */,
 				5CECC83A18F7956600FAC4A2 /* turkey.png */,
+				5CE95EF518FB740700C92378 /* seed.plist */,
 			);
-			name = Images;
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		5C3FF84818F263F800794524 /* Settings */ = {
@@ -211,7 +214,7 @@
 				5CD654FA18F221350015E244 /* Meal Plan */,
 				5C3FF84818F263F800794524 /* Settings */,
 				5C3FF84C18F2641E00794524 /* About */,
-				5C0EA41618F5154B0065545C /* Images */,
+				5C0EA41618F5154B0065545C /* Assets */,
 				5CD654CA18EE5FE70015E244 /* Images.xcassets */,
 				5CD654E718F1D3730015E244 /* Library */,
 				5CD654B618EE5FE70015E244 /* Supporting Files */,
@@ -392,6 +395,7 @@
 				5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */,
 				5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */,
 				5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */,
+				5CE95EF618FB740700C92378 /* seed.plist in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
 				5C0EA41418F515410065545C /* launchImage2x.png in Resources */,
 			);

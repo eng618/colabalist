@@ -7,12 +7,17 @@
 //
 
 #import "GEMAppDelegate.h"
+#import "GEMItem.h"
 
 @implementation GEMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Seed items
+    [self seedItems];
+    
     return YES;
 }
 							
@@ -41,6 +46,47 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+# pragma mark - App setup
+
+- (NSString *)documentsDirectory
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    return [paths lastObject];
+}
+
+- (void)seedItems
+{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    if (![ud boolForKey:@"GEMUserDefaultsSeedItems"]) {
+        //Load seed items
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"seed" ofType:@"plist"];
+        NSArray *seedItems = [NSArray arrayWithContentsOfFile:filePath];
+        
+        // Items
+        NSMutableArray *items = [NSMutableArray array];
+        
+        //create list of items
+        for (int i = 0; i < [seedItems count]; i++) {
+            NSDictionary *seedItem = [seedItems objectAtIndex:i];
+            
+            // Create Item
+            GEMItem *item = [GEMItem createItemWithName:[seedItem objectForKey:@"name"] andQuantity:[[seedItem objectForKey:@"qty"] floatValue] andPrice:[[seedItem objectForKey:@"price"] floatValue] andCategory:[seedItem objectForKey:@"category"] andNotes:[seedItem objectForKey:@"notes"]];
+            
+            // Add item to items
+            [items addObject:item];
+        }
+        
+        // Items path
+        NSString *itemsPath = [[self documentsDirectory] stringByAppendingPathComponent:@"items.plist"];
+        
+        // Write to file
+        if ([NSKeyedArchiver archiveRootObject:items toFile:itemsPath]){
+            [ud setBool:YES forKey:@"GEMUserDefaultsSeedItems"];
+        }
+    }
 }
 
 @end
