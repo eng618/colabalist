@@ -76,6 +76,13 @@
 {
     // Save code goes here
     
+    
+    
+    
+    
+    
+    
+    
     // Instantiate custom item object
     GEMItem *item = [[GEMItem alloc] init];
     // Obtain values from user input fields
@@ -100,6 +107,7 @@
         // Show alert view
         [saveAlert show];
         
+        //Dismiss viewController
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     
