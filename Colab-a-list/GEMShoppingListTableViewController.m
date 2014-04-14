@@ -141,24 +141,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Dequeued shopping list cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shoppingCell" forIndexPath:indexPath];
     
+    // Obtain Item
+    GEMItem *item = [self.items objectAtIndex:[indexPath row]];
+    
     // Configure the cell...
-    // Create instance of ItemManager
-    GEMItemManager *manager = [GEMItemManager storedItems];
-    // Check validity
-    if (manager) {
-        // Create instence of items array
-        NSMutableArray *items = [manager itemsFromManager];
-        GEMItem *current = [items objectAtIndex:indexPath.row];
-        
-        // Set text
-        cell.textLabel.text = [current name];
-        //cell.detailTextLabel.text = [current qty];
-        
-        
-        
-    }
+    [cell.textLabel setText:[item name]];
+    [cell.detailTextLabel setText:[item notes]];
+    
     
     return cell;
 }
