@@ -47,9 +47,19 @@
                             <outlet property="delegate" destination="hKJ-GL-F0H" id="yVY-K1-Pjk"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6hr-rS-17F"/>
+                        <barButtonItem systemItem="edit" id="MKN-7P-tUi">
+                            <connections>
+                                <action selector="editList:" destination="hKJ-GL-F0H" id="WZl-xG-HEx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Colab-a-list" id="pdY-5s-aiu"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="editButton" destination="MKN-7P-tUi" id="735-mm-L4C"/>
                         <segue destination="fgi-rG-ref" kind="modal" identifier="addItemSegue" id="JvN-PF-Nv9"/>
                     </connections>
                 </tableViewController>

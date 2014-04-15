@@ -11,6 +11,7 @@
 #import "GEMItem.h"
 
 @interface GEMShoppingListTableViewController ()
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
 @property NSMutableArray *items;
 
@@ -52,6 +53,9 @@
     self.navigationItem.leftBarButtonItem = revealButton;
     // Show barButton item for addItem
     self.navigationItem.rightBarButtonItem = addItemButton;
+    // Show bottom toolbar
+    self.navigationController.toolbarHidden = NO;
+    //self.editButton = self.editButtonItem;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -72,6 +76,22 @@
     NSLog(@"AddItem buttow was tapped");
     // Preform segue
     [self performSegueWithIdentifier:@"addItemSegue" sender:self];
+}
+
+- (IBAction)editList:(id)sender
+{
+    //[self.tableView setEditing:![self.tableView isEditing] animated:YES];
+
+    
+    if (self.tableView.editing == NO) {
+        [self.tableView setEditing:YES animated:YES];
+        
+        //UIBarButtonItem *done = [[UIBarButtonItem alloc] init];
+        [self.editButton setTitle:@"Done"];
+    }else if (self.tableView.editing == YES) {
+        [self.tableView setEditing:NO animated:YES];
+    }
+    
 }
 
 # pragma mark - Load/Save
