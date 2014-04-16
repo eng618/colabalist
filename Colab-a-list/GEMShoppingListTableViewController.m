@@ -69,7 +69,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-# pragma mark - Button actions
+#pragma mark - Button actions
 
 - (void)addItem:(id)sender
 {
@@ -94,7 +94,7 @@
     
 }
 
-# pragma mark - Save/Load/Delete
+#pragma mark - Save/Load/Delete
 
 // Obtains path to application's list of items
 - (NSString *)pathForItems
@@ -141,7 +141,7 @@
     }
 }
 
-# pragma mark - NSCoding
+#pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -157,7 +157,7 @@
     return self;
 }
 
-# pragma mark - GEMAddItemViewController Delegete
+#pragma mark - GEMAddItemViewController Delegete
 
 - (void)didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes
 {
@@ -173,6 +173,21 @@
     
     // Save items
     [self saveItems];
+}
+
+#pragma GEMEditItemViewController Delegete
+
+-(void)controller:(GEMEditItemViewController *)controller didUpdateItem:(GEMItem *)item
+{
+    // Obtain item
+    for (int i = 0; i < [self.items count]; i++) {
+        GEMItem *anItem = [self.items objectAtIndex:i];
+        
+        if ([[anItem uuid] isEqualToString:[item uuid]]) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
 }
 
 #pragma mark - Table view data source
