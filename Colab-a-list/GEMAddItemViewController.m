@@ -9,7 +9,7 @@
 #import "GEMAddItemViewController.h"
 #import "GEMItem.h"
 
-@interface GEMAddItemViewController ()
+@interface GEMAddItemViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 // Form outlets
 @property (strong, nonatomic) IBOutlet UITextField *itemField;
 @property (strong, nonatomic) IBOutlet UITextField *quantityField;
@@ -84,8 +84,8 @@
     NSString *notes = [self.notesField text];
     
     // Notify delegate
-    [self.delegate didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
-    
+    //[self.delegate didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+    [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
     //Dismiss viewController
     [self dismissViewControllerAnimated:YES completion:nil];
     

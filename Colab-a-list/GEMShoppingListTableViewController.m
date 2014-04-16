@@ -185,18 +185,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    /*
-    // Return the number of rows in the section.
-    int rows = 0;
-    // Create instance of ItemManager
-    GEMItemManager *manager = [GEMItemManager storedItems];
-    // Check validity
-    if (manager) {
-        // Return number of items in array to populate table view
-        rows = [manager.itemsFromManager count];
-    }
-    return rows;
-    */
     return [self.items count];
 }
 
@@ -212,9 +200,24 @@
     // Configure the cell...
     [cell.textLabel setText:[item name]];
     [cell.detailTextLabel setText:[item notes]];
+    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    // Obtain item
+    GEMItem *item = [self.items objectAtIndex:[indexPath row]];
+    
+    if (item) {
+        // Update selection
+        //[self setSelection:item];
+        
+        // Perform segue
+        [self performSegueWithIdentifier:@"editItemSegue" sender:self];
+    }
 }
 
 /*

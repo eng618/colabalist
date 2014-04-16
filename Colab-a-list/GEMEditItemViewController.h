@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMItem.h"
+//@class GEMItem;
 
+@protocol GEMEditItemViewControllerDelegate;
 @interface GEMEditItemViewController : UIViewController
 
+@property GEMItem *item;
+@property (weak) id<GEMEditItemViewControllerDelegate> delegate;
+
 @end
+
+@protocol GEMEditItemViewControllerDelegate <NSObject>
+@required
+- (void)controller:(GEMEditItemViewController *)controller didUpdateItem:(GEMItem *)item;
+@end // End of delegate protocol
