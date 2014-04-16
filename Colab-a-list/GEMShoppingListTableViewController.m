@@ -82,19 +82,19 @@
 {
     //[self.tableView setEditing:![self.tableView isEditing] animated:YES];
 
-    
     if (self.tableView.editing == NO) {
         [self.tableView setEditing:YES animated:YES];
-        
+        //[sender setTitle:@"Done" forState:UIControlStateSelected];
         //UIBarButtonItem *done = [[UIBarButtonItem alloc] init];
-        [self.editButton setTitle:@"Done"];
-    }else if (self.tableView.editing == YES) {
+        //[self.editButton setTitle:@"Done"];
+    }else {
         [self.tableView setEditing:NO animated:YES];
+        //[sender setTitle:@"Done"];
     }
     
 }
 
-# pragma mark - Load/Save
+# pragma mark - Save/Load/Delete
 
 // Obtains path to application's list of items
 - (NSString *)pathForItems
@@ -123,6 +123,21 @@
     // Else instantiate an empty array
     }else{
         self.items = [NSMutableArray array];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Check if editing style is delete
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete item from items
+        [self.items removeObjectAtIndex:[indexPath row]];
+        
+        // Update table view
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        
+        // Save changes to disk
+        [self saveItems];
     }
 }
 
