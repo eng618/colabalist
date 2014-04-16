@@ -37,6 +37,15 @@
     
     // Creaet save button
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
+    
+    // Populate text fields
+    if (self.item) {
+        [self.nameTextField setText:[self.item name]];
+        [self.quantityTextField setText:[NSString stringWithFormat:@"%f", [self.item qty]]];
+        [self.priceTextField setText:[NSString stringWithFormat:@"%f", [self.item price]]];
+        //[self.categoryPickerView ]
+        [self.notesTextField setText:[self.item notes]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -214,6 +214,7 @@
     if (item) {
         // Update selection
         //[self setSelection:item];
+        [self setSelection:item];
         
         // Perform segue
         [self performSegueWithIdentifier:@"editItemSegue" sender:self];
@@ -272,6 +273,13 @@
         
         // Set delegate
         [dvc setDelegate:self];
+    }else if ([segue.identifier isEqualToString:@"editItemSegue"]){
+        // Destination view controller
+        GEMEditItemViewController *dvc = (GEMEditItemViewController *)segue.destinationViewController;
+        
+        // Set delegate
+        [dvc setDelegate:self];
+        [dvc setItem:self.selection];
     }
 }
 
