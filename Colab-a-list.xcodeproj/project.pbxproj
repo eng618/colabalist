@@ -10,7 +10,6 @@
 		5C0EA41118F38B630065545C /* GEMItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41018F38B630065545C /* GEMItemManager.m */; };
 		5C0EA41418F515410065545C /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41218F515410065545C /* launchImage2x.png */; };
 		5C0EA41518F515410065545C /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41318F515410065545C /* launchImageR4.png */; };
-		5C0EA41918F517DF0065545C /* GEMItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */; };
 		5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */; };
 		5C3657F818FE3347002D77CE /* GEMEditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */; };
 		5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */; };
@@ -62,8 +61,6 @@
 		5C0EA41018F38B630065545C /* GEMItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemManager.m; sourceTree = "<group>"; };
 		5C0EA41218F515410065545C /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
 		5C0EA41318F515410065545C /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
-		5C0EA41718F517DF0065545C /* GEMItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItemDetailViewController.h; sourceTree = "<group>"; };
-		5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMItemDetailViewController.m; sourceTree = "<group>"; };
 		5C0EA41D18F51CFB0065545C /* GEMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMWebViewController.h; sourceTree = "<group>"; };
 		5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMWebViewController.m; sourceTree = "<group>"; };
 		5C3657F618FE3347002D77CE /* GEMEditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMEditItemViewController.h; sourceTree = "<group>"; };
@@ -300,8 +297,6 @@
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
 				5C3657F618FE3347002D77CE /* GEMEditItemViewController.h */,
 				5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */,
-				5C0EA41718F517DF0065545C /* GEMItemDetailViewController.h */,
-				5C0EA41818F517DF0065545C /* GEMItemDetailViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,
 				5C3FF84318F236B900794524 /* GEMItem.m */,
 				5C0EA40F18F38B630065545C /* GEMItemManager.h */,
@@ -441,7 +436,6 @@
 				5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */,
 				5C3657F818FE3347002D77CE /* GEMEditItemViewController.m in Sources */,
 				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
-				5C0EA41918F517DF0065545C /* GEMItemDetailViewController.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
 				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
 			);

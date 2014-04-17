@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
     
     // Set categories for new items
-    self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Office", @"Uncategorized"];
+    //self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Office", @"Uncategorized"];
     
 
 }
@@ -57,16 +57,28 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    
-    
-    
-    
-    return [self.categories count];
+    // Instantiate instance of setting manager
+    GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
+    // Check validity
+    if (manager) {
+        // Return number of items in categories array
+        return [manager.categories count];
+    }
+    // If settings manager is nil return 0
+    return 0;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.categories[row];
+    // Instantiate instance of setting manager
+    GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
+    // Check validity
+    if (manager) {
+        // Return number of items in categories array
+        return manager.categories[row];
+    }
+    // Return nil to prevent crash is settings manager is nil
+    return nil;
 }
 
 #pragma mark - Buttons
@@ -80,12 +92,20 @@
 
 - (IBAction)onSave:(id)sender
 {
-    // Save code goes here
+    // Create category string pointer to have object availible outside of settings manager instance
+    NSString *category;
+    // Instantiate instance of setting manager
+    GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
+    // Check validity
+    if (manager) {
+        category = [manager.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+    }
+    
     // Extract user input
     NSString *name = [self.itemField text];
     float quantity = [[self.quantityField text] floatValue];
     float price = [[self.priceField text] floatValue];
-    NSString *category = [self.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+    
     NSString *notes = [self.notesField text];
     
     // Notify delegate
