@@ -236,6 +236,49 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // Obtain item
+    GEMItem *item = [self.items objectAtIndex:[indexPath row]];
+    
+    // Update BOOL
+    [item setInShoppingList:![item inShoppingList]];
+    
+    // Update cell
+    UITableViewCell *cell   = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([item inShoppingList]) {
+        // If cell is in shopping cart
+        /*
+        // Set up item name w/ strikethrough
+        NSMutableAttributedString *attNameString=[[NSMutableAttributedString alloc]initWithString:[item name]];
+        [attNameString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0,[attNameString length])];
+        
+        // Set up item notes w/ strikethrough
+        NSMutableAttributedString *attNoteString=[[NSMutableAttributedString alloc]initWithString:[item notes]];
+        [attNoteString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0,[attNoteString length])];
+        
+        cell.textLabel.attributedText = attNameString;
+        cell.detailTextLabel.attributedText = attNoteString;
+        */
+        
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:cell.textLabel.text];
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributeString length])];
+        
+        [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [attributeString length])];
+        
+        cell.textLabel.attributedText = attributeString;
+    }else{
+        // Else cell is not in shopping cart
+        cell.textLabel.text = [item name];
+    }
+    
+    // Save Items
+    [self saveItems];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
