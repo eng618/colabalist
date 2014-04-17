@@ -7,6 +7,7 @@
 //
 
 #import "GEMAddItemViewController.h"
+#import "GEMSettingsManager.h"
 #import "GEMItem.h"
 
 @interface GEMAddItemViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
@@ -56,6 +57,10 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
+    
+    
+    
+    
     return [self.categories count];
 }
 
@@ -88,41 +93,9 @@
     [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
     //Dismiss viewController
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    
-    
-    
-/*
-    // Instantiate custom item object
-    GEMItem *item = [[GEMItem alloc] init];
-    // Obtain values from user input fields
-    item.name = self.itemField.text;
-    //item.qty = self.quantityField.text;
-    
-    // Obtain row selected
-    NSInteger row = [self.categoryPicker selectedRowInComponent:0];
-    // Find value from array
-    item.category = [self.categories objectAtIndex:row];
-    NSLog(@"The item is: %@ and the quantaty is: %@", item, self.quantityField.text);
-    
-    
-    // Instantiate Item Manager
-    GEMItemManager *manager = [GEMItemManager storedItems];
-    // Check validity
-    if (manager) {
-        [manager.itemsFromManager addObject:item];
-        // Create UI alert view
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved" message:[NSString stringWithFormat:@"You saved %@ to your shopping list", [item name]] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
-        
-        // Show alert view
-        [saveAlert show];
-        
-        //Dismiss viewController
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-*/
-    
 }
+
+#pragma mark - Keyboard
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

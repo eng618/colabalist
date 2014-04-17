@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class GEMItemManager;
-
 @protocol GEMAddItemViewControllerDelegate;
 /*
 @protocol GEMAddItemViewControllerDelegate <NSObject>
