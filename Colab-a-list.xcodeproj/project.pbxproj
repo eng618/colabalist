@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C0EA41418F515410065545C /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41218F515410065545C /* launchImage2x.png */; };
-		5C0EA41518F515410065545C /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0EA41318F515410065545C /* launchImageR4.png */; };
 		5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */; };
 		5C3657F818FE3347002D77CE /* GEMEditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */; };
 		5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */; };
 		5C3657FE18FFAB69002D77CE /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FC18FFAB69002D77CE /* checkmark.png */; };
 		5C3657FF18FFAB69002D77CE /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FD18FFAB69002D77CE /* checkmark@2x.png */; };
 		5C36580218FFBF05002D77CE /* GEMSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */; };
+		5C3658051900CFEF002D77CE /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3658031900CFEF002D77CE /* launchImage2x.png */; };
+		5C3658061900CFEF002D77CE /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3658041900CFEF002D77CE /* launchImageR4.png */; };
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
@@ -58,8 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C0EA41218F515410065545C /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
-		5C0EA41318F515410065545C /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
 		5C0EA41D18F51CFB0065545C /* GEMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMWebViewController.h; sourceTree = "<group>"; };
 		5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMWebViewController.m; sourceTree = "<group>"; };
 		5C3657F618FE3347002D77CE /* GEMEditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMEditItemViewController.h; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		5C3657FD18FFAB69002D77CE /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		5C36580018FFBF05002D77CE /* GEMSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchTableViewController.h; sourceTree = "<group>"; };
 		5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchTableViewController.m; sourceTree = "<group>"; };
+		5C3658031900CFEF002D77CE /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
+		5C3658041900CFEF002D77CE /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
 		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
 		5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddItemViewController.m; sourceTree = "<group>"; };
 		5C3FF84218F236B900794524 /* GEMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMItem.h; sourceTree = "<group>"; };
@@ -143,13 +143,13 @@
 		5C0EA41618F5154B0065545C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5C3658031900CFEF002D77CE /* launchImage2x.png */,
+				5C3658041900CFEF002D77CE /* launchImageR4.png */,
 				5C3657FC18FFAB69002D77CE /* checkmark.png */,
 				5C3657FD18FFAB69002D77CE /* checkmark@2x.png */,
-				5C0EA41218F515410065545C /* launchImage2x.png */,
 				5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */,
 				5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */,
 				5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */,
-				5C0EA41318F515410065545C /* launchImageR4.png */,
 				5CECC82C18F6618600FAC4A2 /* menuIcon.png */,
 				5CECC83A18F7956600FAC4A2 /* turkey.png */,
 				5CE95EF518FB740700C92378 /* seed.plist */,
@@ -392,10 +392,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C0EA41518F515410065545C /* launchImageR4.png in Resources */,
+				5C3658051900CFEF002D77CE /* launchImage2x.png in Resources */,
 				5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */,
 				5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */,
 				5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */,
+				5C3658061900CFEF002D77CE /* launchImageR4.png in Resources */,
 				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
 				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
 				5C3657FF18FFAB69002D77CE /* checkmark@2x.png in Resources */,
@@ -405,7 +406,6 @@
 				5C3657FE18FFAB69002D77CE /* checkmark.png in Resources */,
 				5CE95EF618FB740700C92378 /* seed.plist in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
-				5C0EA41418F515410065545C /* launchImage2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
