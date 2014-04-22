@@ -19,7 +19,7 @@
 
 @protocol GEMAddItemViewControllerDelegate <NSObject>
  // Tried to add the controller (controller:(GEMAddItemviewController *)controller) as first paramiter, but was getting and errror, so I have omitted it for the time being
- - (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
+- (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
 
 
 @end // End of delegate protocol

@@ -159,7 +159,7 @@
 
 #pragma mark - GEMAddItemViewController Delegete
 
-- (void)didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes
+- (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes
 {
     // Create item
     GEMItem *item = [GEMItem createItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
