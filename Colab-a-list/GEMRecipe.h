@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GEMRecipe : NSObject
+@interface GEMRecipe : NSObject <NSCoding>
 
 @property NSString *recipeName;
 @property UIImage *recipeImage;
 @property NSString *recipeDescription;
 @property NSString *recipeServings;
 @property NSString *recipeCookTime;
-@property NSString *recipeingredient;
-@property NSMutableArray *recipeIngredis;
+@property NSString *recipeIngredient;
+@property NSMutableArray *recipeIngredients;
 @property NSString *recipeSourse;
 @property NSURL *recipeURL;
 
++ (GEMRecipe *)createRecipeWithName:(NSString *)name andImage:(UIImage *)image andDescription:(NSString *)description andServings:(NSString *)servings andCookTime:(NSString *)cookTime andIngredient:(NSString *)ingredient andIngredients:(NSMutableArray *)ingredients andsourse:(NSString *)sourse andURL:(NSURL *)recipeURL;
 
 @end
