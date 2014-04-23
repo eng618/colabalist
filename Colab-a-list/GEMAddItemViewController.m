@@ -36,9 +36,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Set categories for new items
-    //self.categories = @[@"Produce", @"Dairy", @"Grocery", @"Bakery", @"Deli", @"Frozen", @"Housewares", @"Personal Care", @"Office", @"Uncategorized"];
-    
+    // Check is item is present to edit
+    if (self.item != nil) {
+        // Creaet save button
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
+        
+        // Populate text fields
+        [self.itemField setText:[self.item name]];
+        [self.quantityField setText:[NSString stringWithFormat:@"%f", [self.item qty]]];
+        [self.priceField setText:[NSString stringWithFormat:@"%f", [self.item price]]];
+        //[self.categoryPickerView ]
+        [self.notesField setText:[self.item notes]];
+    }
 
 }
 
@@ -113,6 +122,30 @@
     [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
     //Dismiss viewController
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)save:(id)sender
+{
+    NSString *name = [self.itemField text];
+    float quantity = [[self.quantityField text] floatValue];
+    float price = [[self.priceField text] floatValue];
+    // Hard coding category until setting singlton is set up
+    NSString *category = @"Hard Category";
+    //NSString *category = [self.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+    NSString *notes = [self.notesField text];
+    
+    // Update item
+    self.item.name = name;
+    self.item.qty = quantity;
+    self.item.price = price;
+    self.item.category = category;
+    self.item.notes = notes;
+    
+    // Notify Delegate
+    [self.delegate controller:self didUpdateItem:self.item];
+    
+    // Pop view controller
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Keyboard

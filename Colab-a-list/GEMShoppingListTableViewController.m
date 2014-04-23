@@ -229,7 +229,7 @@
         [self setSelection:item];
         
         // Perform segue
-        [self performSegueWithIdentifier:@"editItemSegue" sender:self];
+        [self performSegueWithIdentifier:@"addItemSegue" sender:self];
     }
 }
 
@@ -247,20 +247,8 @@
     UITableViewCell *cell   = [tableView cellForRowAtIndexPath:indexPath];
     
     if ([item inShoppingList]) {
-        // If cell is in shopping cart
-        /*
-        // Set up item name w/ strikethrough
-        NSMutableAttributedString *attNameString=[[NSMutableAttributedString alloc]initWithString:[item name]];
-        [attNameString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0,[attNameString length])];
         
-        // Set up item notes w/ strikethrough
-        NSMutableAttributedString *attNoteString=[[NSMutableAttributedString alloc]initWithString:[item notes]];
-        [attNoteString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0,[attNoteString length])];
-        
-        cell.textLabel.attributedText = attNameString;
-        cell.detailTextLabel.attributedText = attNoteString;
-        */
-        
+        //Set up item strikethrough when selected
         NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:cell.textLabel.text];
         [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributeString length])];
         

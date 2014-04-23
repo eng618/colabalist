@@ -7,18 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMItem.h"
 @class GEMItemManager;
 @protocol GEMAddItemViewControllerDelegate;
 
 @interface GEMAddItemViewController : UIViewController 
 
+@property GEMItem *item;
 @property (weak) id<GEMAddItemViewControllerDelegate> delegate;
-//@property NSArray *categories;
 
 @end
 
 @protocol GEMAddItemViewControllerDelegate <NSObject>
 
+@required
+
 - (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
+
+@optional
+
+- (void)controller:(GEMAddItemViewController *)controller didUpdateItem:(GEMItem *)item;
 
 @end // End of delegate protocol
