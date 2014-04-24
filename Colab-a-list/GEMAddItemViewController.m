@@ -125,7 +125,7 @@
         //Dismiss viewController
         [self dismissViewControllerAnimated:YES completion:nil];
     }else if (self.isEditingItem == YES){
-        NSString *category = @"Unknown";
+        NSString *category = @"Uncategorized";
         // Instantiate instance of setting manager
         GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
         // Check validity
@@ -151,35 +151,6 @@
         // Pop view controller
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-}
-
-- (void)save:(id)sender
-{
-    NSString *category = @"Unknown";
-    // Instantiate instance of setting manager
-    GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
-    // Check validity
-    if (manager) {
-        category = [manager.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
-    }
-    
-    NSString *name = [self.itemField text];
-    float quantity = [[self.quantityField text] floatValue];
-    float price = [[self.priceField text] floatValue];
-    NSString *notes = [self.notesField text];
-    
-    // Update item
-    self.item.name = name;
-    self.item.qty = quantity;
-    self.item.price = price;
-    self.item.category = category;
-    self.item.notes = notes;
-    
-    // Notify Delegate
-    [self.delegate controller:self didUpdateItem:self.item];
-    
-    // Pop view controller
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Keyboard

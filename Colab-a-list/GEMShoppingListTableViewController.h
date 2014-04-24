@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GEMAddItemViewController.h"
-#import "GEMEditItemViewController.h"
 @class GEMItemManager;
 @class GEMItem;
 
-@interface GEMShoppingListTableViewController : UITableViewController <GEMAddItemViewControllerDelegate, GEMEditItemViewControllerDelegate>
+@interface GEMShoppingListTableViewController : UITableViewController <GEMAddItemViewControllerDelegate>
 
 @property BOOL isEditingItem;
 @property GEMItem *selection;

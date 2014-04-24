@@ -172,9 +172,7 @@
     [self saveItems];
 }
 
-#pragma GEMEditItemViewController Delegete
-
--(void)controller:(GEMEditItemViewController *)controller didUpdateItem:(GEMItem *)item
+-(void)controller:(GEMAddItemViewController *)controller didUpdateItem:(GEMItem *)item
 {
     // Obtain item
     for (int i = 0; i < [self.items count]; i++) {

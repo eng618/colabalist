@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */; };
-		5C3657F818FE3347002D77CE /* GEMEditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */; };
 		5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */; };
 		5C3657FE18FFAB69002D77CE /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FC18FFAB69002D77CE /* checkmark.png */; };
 		5C3657FF18FFAB69002D77CE /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FD18FFAB69002D77CE /* checkmark@2x.png */; };
@@ -60,8 +59,6 @@
 /* Begin PBXFileReference section */
 		5C0EA41D18F51CFB0065545C /* GEMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMWebViewController.h; sourceTree = "<group>"; };
 		5C0EA41E18F51CFB0065545C /* GEMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMWebViewController.m; sourceTree = "<group>"; };
-		5C3657F618FE3347002D77CE /* GEMEditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMEditItemViewController.h; sourceTree = "<group>"; };
-		5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMEditItemViewController.m; sourceTree = "<group>"; };
 		5C3657F918FF8AF2002D77CE /* GEMSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSettingsManager.h; sourceTree = "<group>"; };
 		5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSettingsManager.m; sourceTree = "<group>"; };
 		5C3657FC18FFAB69002D77CE /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
@@ -296,8 +293,6 @@
 				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
 				5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */,
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
-				5C3657F618FE3347002D77CE /* GEMEditItemViewController.h */,
-				5C3657F718FE3347002D77CE /* GEMEditItemViewController.m */,
 				5C36580018FFBF05002D77CE /* GEMSearchTableViewController.h */,
 				5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,
@@ -435,7 +430,6 @@
 				5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */,
 				5CB7DF0618F97BE30025430A /* GEMRecipe.m in Sources */,
 				5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */,
-				5C3657F818FE3347002D77CE /* GEMEditItemViewController.m in Sources */,
 				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
 				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
