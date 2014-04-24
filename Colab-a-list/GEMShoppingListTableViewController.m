@@ -185,6 +185,8 @@
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
     }
+    // Save item
+    [self saveItems];
 }
 
 #pragma mark - Table view data source

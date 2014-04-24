@@ -149,7 +149,7 @@
         [self.delegate controller:self didUpdateItem:self.item];
         
         // Pop view controller
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

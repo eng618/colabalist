@@ -24,10 +24,10 @@
 
 @required
 
+// Passed to delegate if a new item is saved
 - (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
 
-@optional
-
+// Passed if existing item has been updated
 - (void)controller:(GEMAddItemViewController *)controller didUpdateItem:(GEMItem *)item;
 
 @end // End of delegate protocol
