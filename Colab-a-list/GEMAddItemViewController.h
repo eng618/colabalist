@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GEMItem.h"
+@class GEMItem;
 @class GEMItemManager;
+
 @protocol GEMAddItemViewControllerDelegate;
 
 @interface GEMAddItemViewController : UIViewController 
 
+@property BOOL isEditingItem;
 @property GEMItem *item;
 @property (weak) id<GEMAddItemViewControllerDelegate> delegate;
 

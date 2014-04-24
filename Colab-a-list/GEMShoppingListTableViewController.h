@@ -14,6 +14,7 @@
 
 @interface GEMShoppingListTableViewController : UITableViewController <GEMAddItemViewControllerDelegate, GEMEditItemViewControllerDelegate>
 
+@property BOOL isEditingItem;
 @property GEMItem *selection;
 
 @end

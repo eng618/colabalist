@@ -229,7 +229,7 @@
         [self setSelection:item];
         
         // Perform segue
-        [self performSegueWithIdentifier:@"addItemSegue" sender:self];
+        [self performSegueWithIdentifier:@"editItemSegue" sender:self];
     }
 }
 
@@ -316,12 +316,16 @@
         
         // Set delegate
         [dvc setDelegate:self];
+        [dvc setIsEditingItem:NO];
     }else if ([segue.identifier isEqualToString:@"editItemSegue"]){
         // Destination view controller
-        GEMEditItemViewController *dvc = (GEMEditItemViewController *)segue.destinationViewController;
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        // Obtain add item view controller
+        GEMAddItemViewController *dvc = [nc.viewControllers firstObject];
         
         // Set delegate
         [dvc setDelegate:self];
+        [dvc setIsEditingItem:YES];
         [dvc setItem:self.selection];
     }
 }

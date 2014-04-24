@@ -21,6 +21,7 @@
 @end
 
 @implementation GEMAddItemViewController
+@synthesize item;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,9 +38,9 @@
     // Do any additional setup after loading the view.
     
     // Check is item is present to edit
-    if (self.item != nil) {
+    if (self.isEditingItem == YES) {
         // Creaet save button
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
+        //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
         
         // Populate text fields
         [self.itemField setText:[self.item name]];
@@ -48,7 +49,7 @@
         //[self.categoryPickerView ]
         [self.notesField setText:[self.item notes]];
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,8 +102,60 @@
 
 - (IBAction)onSave:(id)sender
 {
-    // Create category string pointer to have object availible outside of settings manager instance
-    NSString *category;
+    if (self.isEditingItem == NO) {
+        // Create category string pointer to have object availible outside of settings manager instance
+        NSString *category;
+        // Instantiate instance of setting manager
+        GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
+        // Check validity
+        if (manager) {
+            category = [manager.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+        }
+        
+        // Extract user input
+        NSString *name = [self.itemField text];
+        float quantity = [[self.quantityField text] floatValue];
+        float price = [[self.priceField text] floatValue];
+        
+        NSString *notes = [self.notesField text];
+        
+        // Notify delegate
+        //[self.delegate didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+        [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
+        //Dismiss viewController
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else if (self.isEditingItem == YES){
+        NSString *category = @"Unknown";
+        // Instantiate instance of setting manager
+        GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
+        // Check validity
+        if (manager) {
+            category = [manager.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
+        }
+        
+        NSString *name = [self.itemField text];
+        float quantity = [[self.quantityField text] floatValue];
+        float price = [[self.priceField text] floatValue];
+        NSString *notes = [self.notesField text];
+        
+        // Update item
+        self.item.name = name;
+        self.item.qty = quantity;
+        self.item.price = price;
+        self.item.category = category;
+        self.item.notes = notes;
+        
+        // Notify Delegate
+        [self.delegate controller:self didUpdateItem:self.item];
+        
+        // Pop view controller
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)save:(id)sender
+{
+    NSString *category = @"Unknown";
     // Instantiate instance of setting manager
     GEMSettingsManager *manager = [[GEMSettingsManager alloc] init];
     // Check validity
@@ -110,28 +163,9 @@
         category = [manager.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
     }
     
-    // Extract user input
     NSString *name = [self.itemField text];
     float quantity = [[self.quantityField text] floatValue];
     float price = [[self.priceField text] floatValue];
-    
-    NSString *notes = [self.notesField text];
-    
-    // Notify delegate
-    //[self.delegate didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
-    [self.delegate controller:self didSaveItemWithName:name andQuantity:quantity andPrice:price andCategory:category andNotes:notes];
-    //Dismiss viewController
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)save:(id)sender
-{
-    NSString *name = [self.itemField text];
-    float quantity = [[self.quantityField text] floatValue];
-    float price = [[self.priceField text] floatValue];
-    // Hard coding category until setting singlton is set up
-    NSString *category = @"Hard Category";
-    //NSString *category = [self.categories objectAtIndex: [self.categoryPicker selectedRowInComponent:0]];
     NSString *notes = [self.notesField text];
     
     // Update item
@@ -162,14 +196,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
