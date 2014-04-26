@@ -78,7 +78,7 @@
 - (IBAction)editList:(id)sender
 {
     //[self.tableView setEditing:![self.tableView isEditing] animated:YES];
-
+    
     if (self.tableView.editing == NO) {
         [self.tableView setEditing:YES animated:YES];
         //[sender setTitle:@"Done" forState:UIControlStateSelected];
@@ -91,7 +91,7 @@
     
 }
 
-#pragma mark - Save/Load/Delete
+#pragma mark - Helpers: Save/Load/Delete/Strikethrough
 
 // Obtains path to application's list of items
 - (NSString *)pathForItems
@@ -117,10 +117,22 @@
     // If file exists load it into privet items array
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         self.items = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-    // Else instantiate an empty array
+        // Else instantiate an empty array
     }else{
         self.items = [NSMutableArray array];
     }
+}
+
+- (NSMutableAttributedString *)stringEdit:(NSString *)itemString
+{
+    //Set up item strikethrough when selected
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:itemString];
+    [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributeString length])];
+    
+    [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [attributeString length])];
+    
+    return attributeString;
+    
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -210,9 +222,16 @@
     GEMItem *item = [self.items objectAtIndex:[indexPath row]];
     
     // Configure the cell...
-    [cell.textLabel setText:[item name]];
-    [cell.detailTextLabel setText:[item notes]];
-    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+    
+    if ([item inShoppingList]) {
+        [cell.textLabel setAttributedText:[self stringEdit:[item name]]];
+        [cell.detailTextLabel setText:[item notes]];
+        [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+    }else {
+        [cell.textLabel setText:[item name]];
+        [cell.detailTextLabel setText:[item notes]];
+        [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+    }
     
     
     return cell;
@@ -247,17 +266,20 @@
     UITableViewCell *cell   = [tableView cellForRowAtIndexPath:indexPath];
     
     if ([item inShoppingList]) {
+        // Obtain item string
+        NSString *toBeEdited = cell.textLabel.text;
         
-        //Set up item strikethrough when selected
-        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:cell.textLabel.text];
-        [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributeString length])];
+        // Send string to helper method stringEdit, and set it as text lable
+        cell.textLabel.attributedText = [self stringEdit:toBeEdited];
         
-        [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [attributeString length])];
-        
-        cell.textLabel.attributedText = attributeString;
-    }else{
-        // Else cell is not in shopping cart
+        // Update item
+        [item setInShoppingList:YES];
+    }else{// Else cell is not in shopping cart
+        // Set lable to name of item without strikethrough
         cell.textLabel.text = [item name];
+        
+        // Save updated
+        [item setInShoppingList:NO];
     }
     
     // Save Items
@@ -265,42 +287,42 @@
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 
 #pragma mark - Navigation
