@@ -102,7 +102,7 @@
     // Show alert view
     [refreshCompleted show];
     // Dismiss alert view after interval
-    [self performSelector:@selector(dissmissAlertView:) withObject:refreshCompleted afterDelay:1];
+    [self performSelector:@selector(dismissAlertView:) withObject:refreshCompleted afterDelay:1];
 }
 
 #pragma mark - Helpers: Save/Load/Delete/Strikethrough
@@ -137,7 +137,7 @@
     }
 }
 
-- (void)dissmissAlertView:(UIAlertView *)alertView
+- (void)dismissAlertView:(UIAlertView *)alertView
 {
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }

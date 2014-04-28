@@ -782,10 +782,10 @@
             </objects>
             <point key="canvasLocation" x="-1181" y="-900"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search Recipe View Controller-->
         <scene sceneID="44C-hN-bAG">
             <objects>
-                <viewController id="3p0-HG-Dw2" customClass="GEMSearchViewController" sceneMemberID="viewController">
+                <viewController id="3p0-HG-Dw2" customClass="GEMSearchRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vqE-Ua-eYO"/>
                         <viewControllerLayoutGuide type="bottom" id="20R-qr-PQw"/>

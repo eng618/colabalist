@@ -1,18 +1,18 @@
 //
-//  GEMSearchViewController.m
+//  GEMSearchRecipeViewController.m
 //  Colab-a-list
 //
-//  Created by Eric Garcia on 4/27/14.
+//  Created by Eric Garcia on 4/28/14.
 //  Copyright (c) 2014 Garcia Enterprise. All rights reserved.
 //
 
-#import "GEMSearchViewController.h"
+#import "GEMSearchRecipeViewController.h"
 
-@interface GEMSearchViewController ()
+@interface GEMSearchRecipeViewController ()
 
 @end
 
-@implementation GEMSearchViewController
+@implementation GEMSearchRecipeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

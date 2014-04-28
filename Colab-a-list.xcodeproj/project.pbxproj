@@ -11,7 +11,6 @@
 		5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */; };
 		5C3657FE18FFAB69002D77CE /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FC18FFAB69002D77CE /* checkmark.png */; };
 		5C3657FF18FFAB69002D77CE /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3657FD18FFAB69002D77CE /* checkmark@2x.png */; };
-		5C36580218FFBF05002D77CE /* GEMSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */; };
 		5C3658051900CFEF002D77CE /* launchImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3658031900CFEF002D77CE /* launchImage2x.png */; };
 		5C3658061900CFEF002D77CE /* launchImageR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C3658041900CFEF002D77CE /* launchImageR4.png */; };
 		5C3FF84118F22F1B00794524 /* GEMAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */; };
@@ -44,7 +43,7 @@
 		5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */; };
 		5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */; };
 		5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83A18F7956600FAC4A2 /* turkey.png */; };
-		5CFB6610190E098E007EF741 /* GEMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB660F190E098E007EF741 /* GEMSearchViewController.m */; };
+		5CFB6613190E0F03007EF741 /* GEMSearchRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +63,6 @@
 		5C3657FA18FF8AF2002D77CE /* GEMSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSettingsManager.m; sourceTree = "<group>"; };
 		5C3657FC18FFAB69002D77CE /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		5C3657FD18FFAB69002D77CE /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
-		5C36580018FFBF05002D77CE /* GEMSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchTableViewController.h; sourceTree = "<group>"; };
-		5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchTableViewController.m; sourceTree = "<group>"; };
 		5C3658031900CFEF002D77CE /* launchImage2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2x.png; sourceTree = "<group>"; };
 		5C3658041900CFEF002D77CE /* launchImageR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImageR4.png; sourceTree = "<group>"; };
 		5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddItemViewController.h; sourceTree = "<group>"; };
@@ -112,8 +109,8 @@
 		5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-f-Logo__blue_72.png"; sourceTree = "<group>"; };
 		5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue.png; sourceTree = "<group>"; };
 		5CECC83A18F7956600FAC4A2 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
-		5CFB660E190E098E007EF741 /* GEMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchViewController.h; sourceTree = "<group>"; };
-		5CFB660F190E098E007EF741 /* GEMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchViewController.m; sourceTree = "<group>"; };
+		5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchRecipeViewController.h; sourceTree = "<group>"; };
+		5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchRecipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,8 +280,8 @@
 			children = (
 				5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */,
 				5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */,
-				5CFB660E190E098E007EF741 /* GEMSearchViewController.h */,
-				5CFB660F190E098E007EF741 /* GEMSearchViewController.m */,
+				5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */,
+				5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */,
 				5CB7DF0418F97BE30025430A /* GEMRecipe.h */,
 				5CB7DF0518F97BE30025430A /* GEMRecipe.m */,
 			);
@@ -298,8 +295,6 @@
 				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
 				5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */,
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
-				5C36580018FFBF05002D77CE /* GEMSearchTableViewController.h */,
-				5C36580118FFBF05002D77CE /* GEMSearchTableViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,
 				5C3FF84318F236B900794524 /* GEMItem.m */,
 			);
@@ -426,7 +421,6 @@
 			files = (
 				5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */,
 				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
-				5CFB6610190E098E007EF741 /* GEMSearchViewController.m in Sources */,
 				5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */,
 				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,
@@ -437,9 +431,9 @@
 				5CB7DF0618F97BE30025430A /* GEMRecipe.m in Sources */,
 				5C0EA41F18F51CFB0065545C /* GEMWebViewController.m in Sources */,
 				5C3FF84418F236B900794524 /* GEMItem.m in Sources */,
+				5CFB6613190E0F03007EF741 /* GEMSearchRecipeViewController.m in Sources */,
 				5CD654F018F1F1F70015E244 /* GEMSideBarTableViewController.m in Sources */,
 				5CD654EA18F1D3730015E244 /* SWRevealViewController.m in Sources */,
-				5C36580218FFBF05002D77CE /* GEMSearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
