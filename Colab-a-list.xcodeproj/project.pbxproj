@@ -44,6 +44,7 @@
 		5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */; };
 		5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83A18F7956600FAC4A2 /* turkey.png */; };
 		5CFB6613190E0F03007EF741 /* GEMSearchRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */; };
+		5CFB6616190E1059007EF741 /* GEMAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB6615190E1059007EF741 /* GEMAddRecipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		5CECC83A18F7956600FAC4A2 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
 		5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchRecipeViewController.h; sourceTree = "<group>"; };
 		5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchRecipeViewController.m; sourceTree = "<group>"; };
+		5CFB6614190E1059007EF741 /* GEMAddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddRecipeViewController.h; sourceTree = "<group>"; };
+		5CFB6615190E1059007EF741 /* GEMAddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddRecipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,8 @@
 			children = (
 				5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */,
 				5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */,
+				5CFB6614190E1059007EF741 /* GEMAddRecipeViewController.h */,
+				5CFB6615190E1059007EF741 /* GEMAddRecipeViewController.m */,
 				5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */,
 				5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */,
 				5CB7DF0418F97BE30025430A /* GEMRecipe.h */,
@@ -419,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFB6616190E1059007EF741 /* GEMAddRecipeViewController.m in Sources */,
 				5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */,
 				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
 				5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */,

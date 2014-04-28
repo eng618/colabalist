@@ -11,6 +11,8 @@
 
 @interface GEMRecipesTableViewController ()
 
+@property NSMutableArray *recipes;
+
 @end
 
 @implementation GEMRecipesTableViewController
@@ -60,6 +62,35 @@
 
 #pragma mark - Helper methods
 
+// Obtains path to application's list of items
+- (NSString *)pathForItems
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documents = [paths lastObject];
+    
+    return [documents stringByAppendingPathComponent:@"recipes.plist"];
+}
+
+// Obtains the file path from helper method and saves files to it
+- (void)saveItems
+{
+    NSString *filePath = [self pathForItems];
+    [NSKeyedArchiver archiveRootObject:self.recipes toFile:filePath];
+}
+
+// Obtains the file path from helper method.  Unarchives it and saves it to privet mutable array.
+- (void)loadRecipes
+{
+    NSString *filePath = [self pathForItems];
+    
+    // If file exists load it into privet recipes array
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        self.recipes = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    }else{// Else instantiate an empty array
+        self.recipes = [NSMutableArray array];
+    }
+}
+
 - (void)dismissAlertView:(UIAlertView *)alertView
 {
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
@@ -95,6 +126,34 @@
 - (IBAction)editBtn:(id)sender
 {
     NSLog(@"editBtn was pressed");
+}
+
+#pragma mark - GEMAddRecipeViewController Delegate
+
+- (void)controller:(GEMAddRecipeViewController *)controller didSaveRecipeWithName:(NSString *)name andImage:(UIImage *)image andDescription:(NSString *)description andServings:(NSString *)servings andCookTime:(NSString *)cookTime andIngredients:(NSMutableArray *)ingredients andSourse:(NSString *)sourse andURL:(NSURL *)recipeURL
+{
+    
+}
+
+- (void)controller:(GEMAddRecipeViewController *)controller didUpdateRecipe:(GEMRecipe *)item
+{
+    
+}
+
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        // Set Title
+        self.title = @"Recipe";
+        
+        // Load items
+        [self loadRecipes];
+    }
+    return self;
 }
 
 #pragma mark - Table view data source

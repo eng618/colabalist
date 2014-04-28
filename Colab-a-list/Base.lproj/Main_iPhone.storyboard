@@ -278,7 +278,7 @@
                         <barButtonItem systemItem="search" id="psg-lq-R8u">
                             <connections>
                                 <action selector="searchBtn:" destination="kXb-T5-Wvl" id="xtL-cA-ohb"/>
-                                <segue destination="3p0-HG-Dw2" kind="push" id="yyA-IS-VRO"/>
+                                <segue destination="3p0-HG-Dw2" kind="push" identifier="searchSegue" id="yyA-IS-VRO"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="fqC-NO-gab"/>
@@ -295,6 +295,9 @@
                         </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Y0o-oi-jm8" kind="push" identifier="addRecipeSegue" id="ybm-67-8NI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjo-Sn-wIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -800,6 +803,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdJ-jq-7zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63" y="645"/>
+        </scene>
+        <!--Add Recipe View Controller-->
+        <scene sceneID="sPU-0E-LuV">
+            <objects>
+                <viewController id="Y0o-oi-jm8" customClass="GEMAddRecipeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cX6-VP-wWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4cG-MM-hsm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pbm-0m-mwb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Nc-vK-QUa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Jb-Mp-IOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="645"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="sAA-ks-fHq">
