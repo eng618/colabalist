@@ -8,6 +8,7 @@
 
 #import "GEMRecipesTableViewController.h"
 #import "SWRevealViewController.h"
+#import "GEMRecipe.h"
 
 @interface GEMRecipesTableViewController ()
 
@@ -106,6 +107,7 @@
 - (void)addRecipe
 {
     NSLog(@"addRecipe button was pressed");
+    [self performSegueWithIdentifier:@"addRecipeSegue" sender:self];
 }
 
 - (IBAction)refreshBtn:(id)sender
@@ -132,7 +134,18 @@
 
 - (void)controller:(GEMAddRecipeViewController *)controller didSaveRecipeWithName:(NSString *)name andImage:(UIImage *)image andDescription:(NSString *)description andServings:(NSString *)servings andCookTime:(NSString *)cookTime andIngredients:(NSMutableArray *)ingredients andSourse:(NSString *)sourse andURL:(NSURL *)recipeURL
 {
+    // Create item
+    GEMRecipe *recipe = [GEMRecipe createRecipeWithName:name andImage:image andDescription:description andServings:servings andCookTime:cookTime andIngredient:nil andIngredients:ingredients andsourse:sourse andURL:recipeURL];
     
+    //Add item to data source
+    [self.recipes addObject:recipe];
+    
+    //Add row to table view
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForItem:([self.recipes count] - 1) inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+    // Save items
+    [self saveItems];
 }
 
 - (void)controller:(GEMAddRecipeViewController *)controller didUpdateRecipe:(GEMRecipe *)item
@@ -217,7 +230,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -225,7 +237,13 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"addRecipeSegue"]) {
+        GEMAddRecipeViewController *dvc = [segue destinationViewController];
+        
+        // Set delegate
+        //[dvc setDelage:self];
+    }
 }
-*/
 
 @end

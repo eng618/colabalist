@@ -25,6 +25,7 @@
     [recipe setRecipeIngredients:ingredients];
     [recipe setRecipeSourse:sourse];
     [recipe setRecipeURL:recipeURL];
+    [recipe setUuid:[[NSUUID UUID] UUIDString]];
     
     return recipe;
 }
@@ -34,6 +35,7 @@
 // Automatically called by OS to encode an object
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
+    [aCoder encodeObject:self.uuid forKey:@"uuid"];
     [aCoder encodeObject:self.recipeName forKey:@"name"];
     [aCoder encodeObject:self.recipeImage forKey:@"image"];
     [aCoder encodeObject:self.recipeDescription forKey:@"description"];
@@ -51,6 +53,7 @@
     self = [super init];
     
     if (self) {
+        [self setUuid:[aDecoder decodeObjectForKey:@"uuid"]];
         [self setRecipeName:[aDecoder decodeObjectForKey:@"name"]];
         [self setRecipeImage:[aDecoder decodeObjectForKey:@"image"]];
         [self setRecipeDescription:[aDecoder decodeObjectForKey:@"description"]];

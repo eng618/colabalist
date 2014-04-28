@@ -10,6 +10,7 @@
 
 @interface GEMRecipe : NSObject <NSCoding>
 
+@property NSString *uuid;
 @property NSString *recipeName;
 @property UIImage *recipeImage;
 @property NSString *recipeDescription;
