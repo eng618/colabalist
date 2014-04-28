@@ -40,7 +40,7 @@
     // Create manu barbutton item
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuIcon.png"]style:UIBarButtonItemStyleBordered target:self.revealViewController action:@selector(revealToggle:)];
     // Create addItem barbutton item
-    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:nil];
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:@selector(addRecipe)];
     
     // Show barButton items
     self.navigationItem.leftBarButtonItem = revealButtonItem;
@@ -58,6 +58,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Helper methods
+
+- (void)dissmissAlertView:(UIAlertView *)alertView
+{
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
+
+#pragma mark - Buttons
+
+- (IBAction)searchBtn:(id)sender
+{
+    NSLog(@"searchBtn was pressed");
+}
+
+- (void)addRecipe
+{
+    NSLog(@"addRecipe button was pressed");
+}
+
+- (IBAction)refreshBtn:(id)sender
+{
+    NSLog(@"refreshBtn button was tapped");
+    
+    // Refresh table
+    [self.tableView reloadData];
+    
+    // Create alertview to confirm shopping list update
+    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list has been updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    // Show alert view
+    [refreshCompleted show];
+    // Dismiss alert view after interval
+    [self performSelector:@selector(dissmissAlertView:) withObject:refreshCompleted afterDelay:1];
+}
+
+- (IBAction)editBtn:(id)sender
+{
+    NSLog(@"editBtn was pressed");
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -71,10 +110,6 @@
     // Return the number of rows in the section.
     return 5;
 }
-
-#pragma mark - Buttons
-
-//ds- (void)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

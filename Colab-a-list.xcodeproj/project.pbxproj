@@ -44,6 +44,7 @@
 		5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */; };
 		5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */; };
 		5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83A18F7956600FAC4A2 /* turkey.png */; };
+		5CFB6610190E098E007EF741 /* GEMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB660F190E098E007EF741 /* GEMSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-f-Logo__blue_72.png"; sourceTree = "<group>"; };
 		5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue.png; sourceTree = "<group>"; };
 		5CECC83A18F7956600FAC4A2 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
+		5CFB660E190E098E007EF741 /* GEMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchViewController.h; sourceTree = "<group>"; };
+		5CFB660F190E098E007EF741 /* GEMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,8 @@
 			children = (
 				5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */,
 				5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */,
+				5CFB660E190E098E007EF741 /* GEMSearchViewController.h */,
+				5CFB660F190E098E007EF741 /* GEMSearchViewController.m */,
 				5CB7DF0418F97BE30025430A /* GEMRecipe.h */,
 				5CB7DF0518F97BE30025430A /* GEMRecipe.m */,
 			);
@@ -421,6 +426,7 @@
 			files = (
 				5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */,
 				5CD654C018EE5FE70015E244 /* GEMAppDelegate.m in Sources */,
+				5CFB6610190E098E007EF741 /* GEMSearchViewController.m in Sources */,
 				5C3657FB18FF8AF2002D77CE /* GEMSettingsManager.m in Sources */,
 				5CD654F318F1F3480015E244 /* GEMShoppingListTableViewController.m in Sources */,
 				5CD654BC18EE5FE70015E244 /* main.m in Sources */,

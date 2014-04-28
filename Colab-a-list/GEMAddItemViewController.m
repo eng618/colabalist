@@ -40,7 +40,7 @@
     
     // Enable scrolling
     [self.scroller setScrollEnabled:YES];
-    [self.scroller setContentSize:CGSizeMake(320, 715)];
+    [self.scroller setContentSize:CGSizeMake(320, 700)];
     
     // Check is item is present to edit
     if (self.isEditingItem == YES) {
