@@ -12,6 +12,7 @@
 
 + (GEMRecipe *)createRecipeWithName:(NSString *)name andImage:(UIImage *)image andDescription:(NSString *)description andServings:(NSString *)servings andCookTime:(NSString *)cookTime andIngredient:(NSString *)ingredient andIngredients:(NSMutableArray *)ingredients andsourse:(NSString *)sourse andURL:(NSURL *)recipeURL
 {
+    // Create ne recipe
     GEMRecipe *recipe = [[GEMRecipe alloc] init];
     
     //Configure recipe

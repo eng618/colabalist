@@ -77,8 +77,7 @@
 
 - (IBAction)editList:(id)sender
 {
-    //[self.tableView setEditing:![self.tableView isEditing] animated:YES];
-    
+    NSLog(@"editList button was tapped");
     if (self.tableView.editing == NO) {
         [self.tableView setEditing:YES animated:YES];
         //[sender setTitle:@"Done" forState:UIControlStateSelected];
@@ -88,6 +87,22 @@
         [self.tableView setEditing:NO animated:YES];
         //[sender setTitle:@"Done"];
     }
+    
+}
+
+- (IBAction)refreshTable:(id)sender
+{
+    NSLog(@"refreshTable button was tapped");
+    
+    // Refresh table
+    [self.tableView reloadData];
+    
+    // Create alertview to confirm shopping list update
+    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list has been updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    // Show alert view
+    [refreshCompleted show];
+    // Dismiss alert view after interval
+    [self performSelector:@selector(dissmissAlertView:) withObject:refreshCompleted afterDelay:1];
     
 }
 
@@ -121,6 +136,11 @@
     }else{
         self.items = [NSMutableArray array];
     }
+}
+
+- (void)dissmissAlertView:(UIAlertView *)alertView
+{
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 - (NSMutableAttributedString *)stringEdit:(NSString *)itemString
@@ -223,11 +243,12 @@
     
     // Configure the cell...
     
-    if ([item inShoppingList]) {
+    if ([item inShoppingList]) {// If it is in the shopping list load with strikethrough
         [cell.textLabel setAttributedText:[self stringEdit:[item name]]];
         [cell.detailTextLabel setText:[item notes]];
+        //[cell.detailTextLabel setAttributedText:[self stringEdit:[item notes]]];
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
-    }else {
+    }else {// Else load plain text
         [cell.textLabel setText:[item name]];
         [cell.detailTextLabel setText:[item notes]];
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
@@ -266,20 +287,18 @@
     UITableViewCell *cell   = [tableView cellForRowAtIndexPath:indexPath];
     
     if ([item inShoppingList]) {
-        // Obtain item string
-        NSString *toBeEdited = cell.textLabel.text;
+        // Obtain item title
+        NSString *titleToBeEdited = cell.textLabel.text;
+        // Obtain item notes
+        //NSString *notesToBeEdited = cell.detailTextLabel.text;
         
         // Send string to helper method stringEdit, and set it as text lable
-        cell.textLabel.attributedText = [self stringEdit:toBeEdited];
-        
-        // Update item
-        [item setInShoppingList:YES];
+        [cell.textLabel setAttributedText: [self stringEdit:titleToBeEdited]];
+        //[cell.detailTextLabel setAttributedText:[self stringEdit:notesToBeEdited]];
     }else{// Else cell is not in shopping cart
         // Set lable to name of item without strikethrough
-        cell.textLabel.text = [item name];
-        
-        // Save updated
-        [item setInShoppingList:NO];
+        [cell.textLabel setText:[item name]];
+        //[cell.detailTextLabel setText:[item notes]];
     }
     
     // Save Items

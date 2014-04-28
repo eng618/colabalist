@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *priceField;
 @property (strong, nonatomic) IBOutlet UIPickerView *categoryPicker;
 @property (strong, nonatomic) IBOutlet UITextView *notesField;
+@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
 
 @end
 
@@ -36,6 +37,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Enable scrolling
+    [self.scroller setScrollEnabled:YES];
+    [self.scroller setContentSize:CGSizeMake(320, 715)];
     
     // Check is item is present to edit
     if (self.isEditingItem == YES) {
