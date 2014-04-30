@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface GEMSearchRecipeViewController : UIViewController <NSURLConnectionDataDelegate>
+{
+    NSMutableData *_responseData;
+}
 
 @end

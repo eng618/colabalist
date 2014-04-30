@@ -97,7 +97,11 @@
     [self.tableView reloadData];
     
     // Create alertview to confirm shopping list update
-    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list is being updated..." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil
+                                                               message:@"Shopping list is being updated..."
+                                                              delegate:nil
+                                                     cancelButtonTitle:nil
+                                                     otherButtonTitles:nil, nil];
     // Show alert view
     [refreshCompleted show];
     // Dismiss alert view after interval
@@ -145,9 +149,12 @@
 {
     //Set up item strikethrough when selected
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:itemString];
-    [attributeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributeString length])];
+    [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                            value:@2 range:NSMakeRange(0, [attributeString length])];
     
-    [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [attributeString length])];
+    [attributeString addAttribute:NSStrikethroughColorAttributeName
+                            value:[UIColor redColor]
+                            range:NSMakeRange(0, [attributeString length])];
     
     return attributeString;
     

@@ -10,8 +10,6 @@
 
 @interface GEMSearchRecipeViewController ()
 
-@property NSMutableData *responseData;
-
 @end
 
 @implementation GEMSearchRecipeViewController
@@ -37,27 +35,86 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Helpers
+
+- (void)dismissAlertView:(UIAlertView *)alertView
+{
+    [alertView dismissWithClickedButtonIndex:0 animated:YES];
+}
+
 #pragma mark - NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    
+    // Instantiate instance data variable
+    _responseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    // Append data to instance variable
+    [_responseData appendData:data];
     
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse
 {
-    
+    // Returning nil to not cache any data
     return nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    //Parse data here
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    // Declare Allertview
+    UIAlertView *alert;
     
+    switch ([[error localizedDescription] integerValue]) {
+        case 400:
+            alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                               message:@"400 - Bad Request" 
+                                              delegate:nil 
+                                     cancelButtonTitle:nil 
+                                     otherButtonTitles:nil, nil];
+            //Show alert
+            [alert show];
+            
+            // Dismiss alert view after interval
+            [self performSelector:@selector(dismissAlertView:) withObject:alert afterDelay:2];
+            break;
+        case 409:
+            alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                               message:@"409 - API Rate Limit Exceeded"
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:nil, nil];
+            //Show alert
+            [alert show];
+            
+            // Dismiss alert view after interval
+            [self performSelector:@selector(dismissAlertView:) withObject:alert afterDelay:2];
+            break;
+        case 500:
+            alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                               message:@"500 - Internal Server Error"
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:nil, nil];
+            //Show alert
+            [alert show];
+            
+            // Dismiss alert view after interval
+            [self performSelector:@selector(dismissAlertView:) withObject:alert afterDelay:2];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 /*
