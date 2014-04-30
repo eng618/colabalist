@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GEMSearchRecipeViewController : UIViewController
+@interface GEMSearchRecipeViewController : UIViewController <NSURLConnectionDataDelegate>
 
 @end

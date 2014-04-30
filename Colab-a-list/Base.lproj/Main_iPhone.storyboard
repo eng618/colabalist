@@ -275,16 +275,16 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
+                        <barButtonItem systemItem="refresh" id="ciQ-tp-Lhw">
+                            <connections>
+                                <action selector="refreshBtn:" destination="kXb-T5-Wvl" id="L0u-pW-GR2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fqC-NO-gab"/>
                         <barButtonItem systemItem="search" id="psg-lq-R8u">
                             <connections>
                                 <action selector="searchBtn:" destination="kXb-T5-Wvl" id="xtL-cA-ohb"/>
                                 <segue destination="3p0-HG-Dw2" kind="push" identifier="searchSegue" id="yyA-IS-VRO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fqC-NO-gab"/>
-                        <barButtonItem systemItem="refresh" id="ciQ-tp-Lhw">
-                            <connections>
-                                <action selector="refreshBtn:" destination="kXb-T5-Wvl" id="L0u-pW-GR2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CBD-nA-ccx"/>
@@ -796,11 +796,33 @@
                     <view key="view" contentMode="scaleToFill" id="agH-0F-IPF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-dP-eoE">
+                                <rect key="frame" x="0.0" y="60" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3p0-HG-Dw2" id="V8R-qC-bTv"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lBi-Rh-A5m"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Cjk-HN-QSz" id="SFx-C0-QFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdJ-jq-7zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Cjk-HN-QSz">
+                    <connections>
+                        <outlet property="delegate" destination="3p0-HG-Dw2" id="TD7-9a-JRB"/>
+                        <outlet property="searchBar" destination="ex7-dP-eoE" id="n9n-66-Mqm"/>
+                        <outlet property="searchContentsController" destination="3p0-HG-Dw2" id="0QL-gb-46e"/>
+                        <outlet property="searchResultsDataSource" destination="3p0-HG-Dw2" id="V3C-Aw-Ufo"/>
+                        <outlet property="searchResultsDelegate" destination="3p0-HG-Dw2" id="SZP-dR-Rtm"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-63" y="645"/>
         </scene>

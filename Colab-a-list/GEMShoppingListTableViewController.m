@@ -87,7 +87,6 @@
         [self.tableView setEditing:NO animated:YES];
         //[sender setTitle:@"Done"];
     }
-    
 }
 
 - (IBAction)refreshTable:(id)sender
@@ -98,7 +97,7 @@
     [self.tableView reloadData];
     
     // Create alertview to confirm shopping list update
-    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list has been updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list is being updated..." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
     // Show alert view
     [refreshCompleted show];
     // Dismiss alert view after interval

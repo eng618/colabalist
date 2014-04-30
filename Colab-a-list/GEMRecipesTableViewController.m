@@ -13,6 +13,7 @@
 @interface GEMRecipesTableViewController ()
 
 @property NSMutableArray *recipes;
+@property NSMutableData *responseData;
 
 @end
 
@@ -118,7 +119,7 @@
     [self.tableView reloadData];
     
     // Create alertview to confirm shopping list update
-    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Shopping list has been updated" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    UIAlertView *refreshCompleted = [[UIAlertView alloc] initWithTitle:nil message:@"Recipies are being updated..." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
     // Show alert view
     [refreshCompleted show];
     // Dismiss alert view after interval
@@ -128,6 +129,15 @@
 - (IBAction)editBtn:(id)sender
 {
     NSLog(@"editBtn was pressed");
+    if (self.tableView.editing == NO) {
+        [self.tableView setEditing:YES animated:YES];
+        //[sender setTitle:@"Done" forState:UIControlStateSelected];
+        //UIBarButtonItem *done = [[UIBarButtonItem alloc] init];
+        //[self.editButton setTitle:@"Done"];
+    }else {
+        [self.tableView setEditing:NO animated:YES];
+        //[sender setTitle:@"Done"];
+    }
 }
 
 #pragma mark - GEMAddRecipeViewController Delegate
@@ -239,7 +249,7 @@
     // Pass the selected object to the new view controller.
     
     if ([segue.identifier isEqualToString:@"addRecipeSegue"]) {
-        GEMAddRecipeViewController *dvc = [segue destinationViewController];
+        //GEMAddRecipeViewController *dvc = [segue destinationViewController];
         
         // Set delegate
         //[dvc setDelage:self];

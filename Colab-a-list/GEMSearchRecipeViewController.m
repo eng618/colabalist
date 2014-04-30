@@ -10,6 +10,8 @@
 
 @interface GEMSearchRecipeViewController ()
 
+@property NSMutableData *responseData;
+
 @end
 
 @implementation GEMSearchRecipeViewController
@@ -33,6 +35,29 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse
+{
+    
+    return nil;
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    
 }
 
 /*
