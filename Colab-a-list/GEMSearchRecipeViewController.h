@@ -12,6 +12,7 @@
 @interface GEMSearchRecipeViewController : UIViewController <NSURLConnectionDataDelegate>
 {
     NSMutableData *_responseData;
+    NSDictionary *_parsedObject;
 }
 
 @end

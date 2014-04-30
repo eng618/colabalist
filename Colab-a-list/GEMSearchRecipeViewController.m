@@ -52,6 +52,7 @@
     
     // Create URL connection and fire request
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
 }
 
 
@@ -79,15 +80,19 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     //Parse data here
+    _parsedObject = [NSJSONSerialization JSONObjectWithData:_responseData options:0 error:nil];
     
+    NSLog(@"Object dictionary: %@", _parsedObject);
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     // Declare Allertview
     UIAlertView *alert;
+    NSInteger errorCode = [[error localizedDescription] integerValue];
     
-    switch ([[error localizedDescription] integerValue]) {
+    //switch ([[error localizedDescription] integerValue]) {
+    switch (errorCode) {
         case 400:
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                message:@"400 - Bad Request" 
@@ -100,6 +105,7 @@
             // Dismiss alert view after interval
             [self performSelector:@selector(dismissAlertView:) withObject:alert afterDelay:2];
             break;
+            
         case 409:
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                message:@"409 - API Rate Limit Exceeded"
@@ -112,6 +118,7 @@
             // Dismiss alert view after interval
             [self performSelector:@selector(dismissAlertView:) withObject:alert afterDelay:2];
             break;
+            
         case 500:
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                message:@"500 - Internal Server Error"
