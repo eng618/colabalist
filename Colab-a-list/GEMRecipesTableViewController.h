@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GEMAddRecipeViewController.h"
+#import "GEMRecipeDelegate.h"
+@class GEMAddRecipeViewController;
 @class GEMRecipe;
 
-@interface GEMRecipesTableViewController : UITableViewController <GEMAddRecipeViewControllerDelegate>
+@interface GEMRecipesTableViewController : UITableViewController <GEMRecipeDelegate>
 
 @end

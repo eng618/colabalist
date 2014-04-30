@@ -74,7 +74,8 @@
 		5C3FF84618F263E400794524 /* GEMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSettingsViewController.m; sourceTree = "<group>"; };
 		5C3FF84918F2641300794524 /* GEMAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAboutViewController.h; sourceTree = "<group>"; };
 		5C3FF84A18F2641300794524 /* GEMAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAboutViewController.m; sourceTree = "<group>"; };
-		5CB48B881910CCC6002EE1C6 /* GEMAddItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMAddItemDelegate.h; sourceTree = "<group>"; };
+		5CB48B881910CCC6002EE1C6 /* GEMItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMItemDelegate.h; sourceTree = "<group>"; };
+		5CB48B891910D179002EE1C6 /* GEMRecipeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMRecipeDelegate.h; sourceTree = "<group>"; };
 		5CB7DF0418F97BE30025430A /* GEMRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMRecipe.h; sourceTree = "<group>"; };
 		5CB7DF0518F97BE30025430A /* GEMRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMRecipe.m; sourceTree = "<group>"; };
 		5CD654AC18EE5FE70015E244 /* Colab-a-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colab-a-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +285,7 @@
 			children = (
 				5CD654F418F220340015E244 /* GEMRecipesTableViewController.h */,
 				5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */,
+				5CB48B891910D179002EE1C6 /* GEMRecipeDelegate.h */,
 				5CFB6614190E1059007EF741 /* GEMAddRecipeViewController.h */,
 				5CFB6615190E1059007EF741 /* GEMAddRecipeViewController.m */,
 				5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */,
@@ -299,7 +301,7 @@
 			children = (
 				5CD654F118F1F3480015E244 /* GEMShoppingListTableViewController.h */,
 				5CD654F218F1F3480015E244 /* GEMShoppingListTableViewController.m */,
-				5CB48B881910CCC6002EE1C6 /* GEMAddItemDelegate.h */,
+				5CB48B881910CCC6002EE1C6 /* GEMItemDelegate.h */,
 				5C3FF83F18F22F1B00794524 /* GEMAddItemViewController.h */,
 				5C3FF84018F22F1B00794524 /* GEMAddItemViewController.m */,
 				5C3FF84218F236B900794524 /* GEMItem.h */,

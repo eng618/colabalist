@@ -10,7 +10,7 @@
 @class GEMAddItemViewController;
 @class GEMItem;
 
-@protocol GEMAddItemDelegate <NSObject>
+@protocol GEMItemDelegate <NSObject>
 //@protocol GEMAddItemViewControllerDelegate <NSObject
 
 @required

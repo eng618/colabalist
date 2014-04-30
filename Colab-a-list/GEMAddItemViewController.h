@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GEMAddItemDelegate.h"
+#import "GEMItemDelegate.h"
 @class GEMItem;
 @class GEMItemManager;
 
@@ -18,6 +18,6 @@
 
 @property BOOL isEditingItem;
 @property GEMItem *item;
-@property (weak, nonatomic) id<GEMAddItemDelegate> delegate;
+@property (weak, nonatomic) id<GEMItemDelegate> delegate;
 
 @end
