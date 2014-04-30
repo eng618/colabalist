@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMAddItemDelegate.h"
 @class GEMItem;
 @class GEMItemManager;
+
 
 @protocol GEMAddItemViewControllerDelegate;
 
@@ -16,18 +18,6 @@
 
 @property BOOL isEditingItem;
 @property GEMItem *item;
-@property (weak) id<GEMAddItemViewControllerDelegate> delegate;
+@property (weak, nonatomic) id<GEMAddItemDelegate> delegate;
 
 @end
-
-@protocol GEMAddItemViewControllerDelegate <NSObject>
-
-@required
-
-// Passed to delegate if a new item is saved
-- (void)controller:(GEMAddItemViewController *)controller didSaveItemWithName:(NSString *)name andQuantity:(float)quantity andPrice:(float)price andCategory:(NSString *)category andNotes:(NSString *)notes;
-
-// Passed if existing item has been updated
-- (void)controller:(GEMAddItemViewController *)controller didUpdateItem:(GEMItem *)item;
-
-@end // End of delegate protocol

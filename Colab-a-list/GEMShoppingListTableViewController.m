@@ -8,6 +8,7 @@
 
 #import "GEMShoppingListTableViewController.h"
 #import "SWRevealViewController.h"
+#import "GEMAddItemViewController.h"
 #import "GEMItem.h"
 
 @interface GEMShoppingListTableViewController ()

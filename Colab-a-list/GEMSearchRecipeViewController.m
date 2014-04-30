@@ -7,6 +7,7 @@
 //
 
 #import "GEMSearchRecipeViewController.h"
+#import "GEMRecipe.h"
 
 @interface GEMSearchRecipeViewController ()
 
@@ -41,6 +42,18 @@
 {
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }
+
+#pragma mark - Buttons
+
+- (IBAction)testConnection:(id)sender
+{
+    // Create URL request
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.yummly.com/v1/api/recipes?_app_id=6191b024&_app_key=6efe529146a8e210cec188d55f877c9f&q=roast+beef&requirePictures=ture"]];
+    
+    // Create URL connection and fire request
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
 
 #pragma mark - NSURLConnection Delegate Methods
 
