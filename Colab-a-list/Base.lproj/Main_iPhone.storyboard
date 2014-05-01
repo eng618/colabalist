@@ -15,7 +15,7 @@
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shoppingCell" textLabel="sSZ-Qz-NLJ" detailTextLabel="9BM-L3-bbu" style="IBUITableViewCellStyleSubtitle" id="Zi6-XQ-lEj">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zi6-XQ-lEj" id="75w-Jy-IIv">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -689,7 +689,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="hdC-19-a4X" kind="custom" customClass="SWRevealViewControllerSegue" id="PJ3-8F-7pw"/>
+                                    <segue destination="hKJ-GL-F0H" kind="custom" customClass="SWRevealViewControllerSegue" id="W0N-uz-3nf"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipe" id="Oj1-pN-lUd">
@@ -988,7 +988,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ppm-5w-JED"/>
+        <segue reference="W0N-uz-3nf"/>
         <segue reference="JvN-PF-Nv9"/>
     </inferredMetricsTieBreakers>
 </document>
