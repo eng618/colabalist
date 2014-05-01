@@ -137,6 +137,19 @@
     }
 }
 
+#pragma mark - Keyboard
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn: (UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 /*
 #pragma mark - Navigation
 

@@ -50,9 +50,6 @@
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     self.navigationItem.rightBarButtonItem = addButtonItem;
     
-    // Testing AFNetworking
-    
-    
     
 }
 
