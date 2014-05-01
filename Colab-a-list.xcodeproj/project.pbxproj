@@ -17,6 +17,8 @@
 		5C3FF84418F236B900794524 /* GEMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84318F236B900794524 /* GEMItem.m */; };
 		5C3FF84718F263E400794524 /* GEMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84618F263E400794524 /* GEMSettingsViewController.m */; };
 		5C3FF84B18F2641300794524 /* GEMAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FF84A18F2641300794524 /* GEMAboutViewController.m */; };
+		5CB48B8C19123C38002EE1C6 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB48B8B19123C38002EE1C6 /* menuIcon.png */; };
+		5CB48B9019124C10002EE1C6 /* defaultRecipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB48B8F19124C10002EE1C6 /* defaultRecipe.png */; };
 		5CB7DF0618F97BE30025430A /* GEMRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7DF0518F97BE30025430A /* GEMRecipe.m */; };
 		5CD654B018EE5FE70015E244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654AF18EE5FE70015E244 /* Foundation.framework */; };
 		5CD654B218EE5FE70015E244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD654B118EE5FE70015E244 /* CoreGraphics.framework */; };
@@ -38,11 +40,9 @@
 		5CD654F618F220340015E244 /* GEMRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F518F220340015E244 /* GEMRecipesTableViewController.m */; };
 		5CD654F918F2206D0015E244 /* GEMMealPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */; };
 		5CE95EF618FB740700C92378 /* seed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CE95EF518FB740700C92378 /* seed.plist */; };
-		5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC82C18F6618600FAC4A2 /* menuIcon.png */; };
 		5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */; };
 		5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */; };
 		5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */; };
-		5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CECC83A18F7956600FAC4A2 /* turkey.png */; };
 		5CFB6613190E0F03007EF741 /* GEMSearchRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */; };
 		5CFB6616190E1059007EF741 /* GEMAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB6615190E1059007EF741 /* GEMAddRecipeViewController.m */; };
 /* End PBXBuildFile section */
@@ -76,6 +76,8 @@
 		5C3FF84A18F2641300794524 /* GEMAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAboutViewController.m; sourceTree = "<group>"; };
 		5CB48B881910CCC6002EE1C6 /* GEMItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMItemDelegate.h; sourceTree = "<group>"; };
 		5CB48B891910D179002EE1C6 /* GEMRecipeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMRecipeDelegate.h; sourceTree = "<group>"; };
+		5CB48B8B19123C38002EE1C6 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
+		5CB48B8F19124C10002EE1C6 /* defaultRecipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultRecipe.png; sourceTree = "<group>"; };
 		5CB7DF0418F97BE30025430A /* GEMRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMRecipe.h; sourceTree = "<group>"; };
 		5CB7DF0518F97BE30025430A /* GEMRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMRecipe.m; sourceTree = "<group>"; };
 		5CD654AC18EE5FE70015E244 /* Colab-a-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colab-a-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,11 +109,9 @@
 		5CD654F718F2206D0015E244 /* GEMMealPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMMealPlanViewController.h; sourceTree = "<group>"; };
 		5CD654F818F2206D0015E244 /* GEMMealPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMMealPlanViewController.m; sourceTree = "<group>"; };
 		5CE95EF518FB740700C92378 /* seed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = seed.plist; sourceTree = "<group>"; };
-		5CECC82C18F6618600FAC4A2 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
 		5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-g-plus-icon-64.png"; sourceTree = "<group>"; };
 		5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-f-Logo__blue_72.png"; sourceTree = "<group>"; };
 		5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue.png; sourceTree = "<group>"; };
-		5CECC83A18F7956600FAC4A2 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
 		5CFB6611190E0F03007EF741 /* GEMSearchRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMSearchRecipeViewController.h; sourceTree = "<group>"; };
 		5CFB6612190E0F03007EF741 /* GEMSearchRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMSearchRecipeViewController.m; sourceTree = "<group>"; };
 		5CFB6614190E1059007EF741 /* GEMAddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddRecipeViewController.h; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 				5CECC83018F670DA00FAC4A2 /* new-g-plus-icon-64.png */,
 				5CECC83418F671F200FAC4A2 /* FB-f-Logo__blue_72.png */,
 				5CECC83818F6736300FAC4A2 /* Twitter_logo_blue.png */,
-				5CECC82C18F6618600FAC4A2 /* menuIcon.png */,
-				5CECC83A18F7956600FAC4A2 /* turkey.png */,
+				5CB48B8F19124C10002EE1C6 /* defaultRecipe.png */,
+				5CB48B8B19123C38002EE1C6 /* menuIcon.png */,
 				5CE95EF518FB740700C92378 /* seed.plist */,
 			);
 			name = Assets;
@@ -399,15 +399,15 @@
 				5C3658051900CFEF002D77CE /* launchImage2x.png in Resources */,
 				5CD654C618EE5FE70015E244 /* Main_iPad.storyboard in Resources */,
 				5CECC83918F6736300FAC4A2 /* Twitter_logo_blue.png in Resources */,
+				5CB48B9019124C10002EE1C6 /* defaultRecipe.png in Resources */,
 				5CECC83118F670DA00FAC4A2 /* new-g-plus-icon-64.png in Resources */,
 				5C3658061900CFEF002D77CE /* launchImageR4.png in Resources */,
 				5CD654CB18EE5FE70015E244 /* Images.xcassets in Resources */,
 				5CD654C318EE5FE70015E244 /* Main_iPhone.storyboard in Resources */,
 				5C3657FF18FFAB69002D77CE /* checkmark@2x.png in Resources */,
-				5CECC83B18F7956600FAC4A2 /* turkey.png in Resources */,
-				5CECC82D18F6618600FAC4A2 /* menuIcon.png in Resources */,
 				5CECC83618F671F200FAC4A2 /* FB-f-Logo__blue_72.png in Resources */,
 				5C3657FE18FFAB69002D77CE /* checkmark.png in Resources */,
+				5CB48B8C19123C38002EE1C6 /* menuIcon.png in Resources */,
 				5CE95EF618FB740700C92378 /* seed.plist in Resources */,
 				5CD654BA18EE5FE70015E244 /* InfoPlist.strings in Resources */,
 			);
