@@ -52,7 +52,7 @@
     
     // Create URL connection and fire request
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-
+    NSLog(@"Connection: %@", conn);
 }
 
 
