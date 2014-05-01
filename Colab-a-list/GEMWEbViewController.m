@@ -15,9 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *refresh;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *forward;
 
-- (void)loadRequestFromURL:(NSURL *)url;
-- (void)updateButtons;
-
 @end
 
 @implementation GEMWebViewController
@@ -36,9 +33,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    // Set title
-    [self setTitle:@"Web"];
     
     // Pass url to loadRequestFromURL
     [self loadRequestFromURL:webURL];
@@ -67,6 +61,18 @@
     self.stop.enabled = self.webView.loading;
 }
 
+- (void)loadRequestFromAddressField:(id)addressField
+{
+    NSString *urlString = [addressField text];
+    [self loadRequestFromURL:[NSURL URLWithString:urlString]];
+}
+
+- (void)updateTitle:(UIWebView *)aWebView
+{
+    NSString *pageTitle = [aWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    self.title = pageTitle;
+}
+
 #pragma mark - Web View Delegate
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
@@ -79,6 +85,7 @@
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self updateButtons];
+    [self updateTitle:webView];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

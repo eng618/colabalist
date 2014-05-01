@@ -12,6 +12,9 @@
 
 @property (nonatomic) NSURL *webURL;
 
-
+- (void)loadRequestFromURL:(NSURL *)url;
+- (void)loadRequestFromAddressField:(id)addressField;
+- (void)updateTitle:(UIWebView *)aWebView;
+- (void)updateButtons;
 
 @end
