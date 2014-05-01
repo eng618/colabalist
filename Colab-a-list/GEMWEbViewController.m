@@ -71,6 +71,7 @@
 {
     NSString *pageTitle = [aWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
     self.title = pageTitle;
+    
 }
 
 #pragma mark - Web View Delegate
