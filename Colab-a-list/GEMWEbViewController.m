@@ -8,7 +8,7 @@
 
 #import "GEMWebViewController.h"
 
-@interface GEMWebViewController ()
+@interface GEMWebViewController () <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *back;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *stop;
@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *forward;
 
 - (void)loadRequestFromURL:(NSURL *)url;
+- (void)updateButtons;
 
 @end
 
@@ -49,7 +50,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Helpers
+#pragma mark - Web View Helpers
 
 - (void)loadRequestFromURL:(NSURL *)url
 {
@@ -57,6 +58,33 @@
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:webURL];
     //Load request to webview
     [self.webView loadRequest:requestURL];
+}
+
+- (void)updateButtons
+{
+    self.forward.enabled = self.webView.canGoForward;
+    self.back.enabled = self.webView.canGoBack;
+    self.stop.enabled = self.webView.loading;
+}
+
+#pragma mark - Web View Delegate
+
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self updateButtons];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self updateButtons];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self updateButtons];
 }
 
 /*
