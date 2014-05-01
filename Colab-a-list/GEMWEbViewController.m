@@ -10,6 +10,12 @@
 
 @interface GEMWebViewController ()
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *back;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *stop;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *refresh;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *forward;
+
+- (void)loadRequestFromURL:(NSURL *)url;
 
 @end
 
@@ -30,10 +36,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //NSString *fullURL = @"https://plus.google.com/+EricGarcia";
-    //NSURL *url = [NSURL URLWithString:fullURL];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:webURL];
-    [_webView loadRequest:requestObj];
+    // Set title
+    [self setTitle:@"Web"];
+    
+    // Pass url to loadRequestFromURL
+    [self loadRequestFromURL:webURL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +48,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)closeWeb:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+#pragma mark - Helpers
+
+- (void)loadRequestFromURL:(NSURL *)url
+{
+    // Create URL request
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:webURL];
+    //Load request to webview
+    [self.webView loadRequest:requestURL];
 }
 
 /*

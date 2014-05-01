@@ -577,7 +577,7 @@
         <!--About View Controller-->
         <scene sceneID="uU7-VS-vca">
             <objects>
-                <viewController id="5ks-bq-xbR" customClass="GEMAboutViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="5ks-bq-xbR" customClass="GEMAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QSo-R4-eaM"/>
                         <viewControllerLayoutGuide type="bottom" id="GDF-mv-8aU"/>
@@ -628,7 +628,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="8DI-sq-QrI" kind="modal" identifier="webSegue" id="IVy-W9-27X"/>
+                        <segue destination="8DI-sq-QrI" kind="push" identifier="webSegue" id="IVy-W9-27X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frF-uv-L1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -807,7 +807,6 @@
         <!--Search Recipe View Controller-->
         <scene sceneID="44C-hN-bAG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QdJ-jq-7zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3p0-HG-Dw2" customClass="GEMSearchRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vqE-Ua-eYO"/>
@@ -841,6 +840,7 @@
                     <navigationItem key="navigationItem" id="lBi-Rh-A5m"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdJ-jq-7zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63" y="645"/>
         </scene>
@@ -876,19 +876,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-2k-6n1">
-                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-2k-6n1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evI-vX-cv9">
-                                <rect key="frame" x="0.0" y="27" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="done" id="05p-mW-vdm">
+                                    <barButtonItem systemItem="rewind" id="YTF-TN-2rs">
                                         <connections>
-                                            <action selector="closeWeb:" destination="8DI-sq-QrI" id="910-I2-2iW"/>
+                                            <action selector="goBack" destination="8xz-2k-6n1" id="gJI-RS-1vb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fp9-eT-L5T"/>
+                                    <barButtonItem systemItem="stop" id="TWH-yb-Psa">
+                                        <connections>
+                                            <action selector="stopLoading" destination="8xz-2k-6n1" id="99E-Qq-GFj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wq6-vd-MVS"/>
+                                    <barButtonItem systemItem="refresh" id="kLe-7r-yqv">
+                                        <connections>
+                                            <action selector="reload" destination="8xz-2k-6n1" id="Er5-4U-Tjr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zSj-Nl-K4D"/>
+                                    <barButtonItem systemItem="fastForward" id="fqL-5N-3or">
+                                        <connections>
+                                            <action selector="goForward" destination="8xz-2k-6n1" id="thY-3K-iof"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -898,6 +916,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="LiQ-U9-uqp"/>
                     <connections>
+                        <outlet property="back" destination="YTF-TN-2rs" id="6dM-s9-8D6"/>
+                        <outlet property="forward" destination="fqL-5N-3or" id="fla-WZ-Ip4"/>
+                        <outlet property="refresh" destination="kLe-7r-yqv" id="w6V-WE-Ar0"/>
+                        <outlet property="stop" destination="TWH-yb-Psa" id="6hF-eI-b4R"/>
                         <outlet property="webView" destination="8xz-2k-6n1" id="Od8-zt-smg"/>
                     </connections>
                 </viewController>
@@ -908,7 +930,7 @@
         <!--Navigation Controller - Shopping-->
         <scene sceneID="CWE-Ad-nVf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hdC-19-a4X" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hdC-19-a4X" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shopping" id="Nhp-aD-d9a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YF8-ke-UXD">
@@ -916,6 +938,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AQX-Df-IGw">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="hKJ-GL-F0H" kind="relationship" relationship="rootViewController" id="NWb-Yj-rag"/>
                     </connections>
@@ -934,6 +960,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="G1S-Uj-M8k">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="RCd-VH-vng" kind="relationship" relationship="rootViewController" id="ezh-SK-3Ob"/>
                     </connections>
