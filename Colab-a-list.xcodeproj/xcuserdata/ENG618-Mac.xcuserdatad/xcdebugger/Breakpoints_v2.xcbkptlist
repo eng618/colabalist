@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Colab-a-list/GEMSearchRecipeViewController.m"
-            timestampString = "420534379.031028"
+            timestampString = "420693369.551046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-connectionDidFinishLoading:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Colab-a-list/GEMSearchRecipeViewController.m"
-            timestampString = "420590105.799885"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Colab-a-list/GEMSearchRecipeViewController.m"
-            timestampString = "420590135.983892"
+            timestampString = "420693369.551046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
          </BreakpointContent>

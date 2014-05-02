@@ -15,4 +15,6 @@
     NSDictionary *_parsedObject;
 }
 
+- (NSArray *)recipesFromJSON:(NSDictionary *)recipesJSON;
+
 @end

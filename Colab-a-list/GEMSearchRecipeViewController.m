@@ -11,6 +11,7 @@
 
 @interface GEMSearchRecipeViewController ()
 
+
 @end
 
 @implementation GEMSearchRecipeViewController
@@ -43,12 +44,43 @@
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+- (NSArray *)recipesFromJSON:(NSDictionary *)recipesJSON
+{
+    
+    NSMutableArray *recipes = [[NSMutableArray alloc] init];
+    
+    NSArray *results = [recipesJSON valueForKey:@"matches"];
+    
+    NSLog(@"Count: %d", results.count);
+    
+    
+    
+    
+    return recipes;
+}
+
 #pragma mark - Buttons
 
 - (IBAction)testConnection:(id)sender
 {
+    /*
+    // Big Oven api key
+    NSString *apiKey = @"dvxj2mEt7AK4w80f6EE99UR7a2964fLz";
+    // Search term
+    NSString *searchTerm = @"pizza";
     // Create URL request
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.yummly.com/v1/api/recipes?_app_id=6191b024&_app_key=6efe529146a8e210cec188d55f877c9f&q=roast+beef&requirePictures=ture"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.bigoven.com/recipes?title_kw=%@&pg=1&rpp=20&api_key=%@", searchTerm, apiKey]]];
+     */
+    
+    
+    // Yummly application id
+    NSString *appID = @"6191b024";
+    // Yummly api key
+    NSString *apiKey = @"6efe529146a8e210cec188d55f877c9f";
+    // Search term
+    NSString *searchTerm = @"pizza";
+    // Create URL request
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.yummly.com/v1/api/recipes?_app_id=%@&_app_key=%@&q=%@&requirePictures=ture", appID, apiKey, searchTerm]]];
     
     // Create URL connection and fire request
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -83,6 +115,9 @@
     _parsedObject = [NSJSONSerialization JSONObjectWithData:_responseData options:0 error:nil];
     
     NSLog(@"Object dictionary: %@", _parsedObject);
+    
+    [self recipesFromJSON:_parsedObject];
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
